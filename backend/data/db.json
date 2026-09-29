@@ -1,0 +1,236 @@
+{
+  "users": [
+    {
+      "_id": "user_farmer_1",
+      "name": "Ramesh Kumar",
+      "email": "farmer@gmail.com",
+      "password": "$2a$10$w..54QUNh9raRxe/nRKHiuQN9QPAGSW3cJ5H723tRom9c42sTHz4e",
+      "role": "farmer",
+      "createdAt": "2026-09-25T06:01:02.418Z"
+    },
+    {
+      "_id": "user_buyer_1",
+      "name": "Suresh Patel",
+      "email": "buyer@gmail.com",
+      "password": "$2a$10$w..54QUNh9raRxe/nRKHiuQN9QPAGSW3cJ5H723tRom9c42sTHz4e",
+      "role": "buyer",
+      "createdAt": "2026-09-25T06:01:02.421Z"
+    },
+    {
+      "_id": "user_1790316208861_nhugf",
+      "name": "Deva",
+      "email": "devadharshini876@gmail.com",
+      "password": "$2a$10$9dv81kxaPwgyzVbgFQCbj.Iq9LQ/rXzf98GHcCE9NM3HAS/xgJ/2.",
+      "role": "farmer",
+      "createdAt": "2026-09-25T06:03:28.861Z"
+    },
+    {
+      "_id": "user_1790316496839_nueso",
+      "name": "Deva",
+      "email": "deva_test@gmail.com",
+      "password": "$2a$10$7MXPxBXqx8WH38pGj1nZsec5y9E.dpQWMDuD6UqOpAn0dbEjmqE2i",
+      "role": "farmer",
+      "createdAt": "2026-09-25T06:08:16.839Z"
+    },
+    {
+      "_id": "user_1790316869171_ofc3q",
+      "name": "Kavitha",
+      "email": "kavitha_1790316869022@gmail.com",
+      "password": "$2a$10$vKP/c5CMetSwmGspfHdr1O48H9CBk1Toe7WE8vtPyS.cAdpldRGVq",
+      "role": "buyer",
+      "createdAt": "2026-09-25T06:14:29.171Z"
+    },
+    {
+      "_id": "user_1790317119632_zqxmd",
+      "name": "Dhakshatha",
+      "email": "dhakshathamanjunath@gmail.com",
+      "password": "$2a$10$6h7WK/B3n0UOIN3gD//l.e1V86.BKScRhZ3h89Um6n7PVk1FRvJOC",
+      "role": "buyer",
+      "createdAt": "2026-09-25T06:18:39.632Z"
+    },
+    {
+      "_id": "user_1790589459886_qkmlw",
+      "name": "dhakshu",
+      "email": "310625243041@eec.srmrmp.edu.in",
+      "password": "$2a$10$pPgdk/BsZSv5/7u3BwhFqe5ei1mABf/KV4DTZ8/tLnVQuTFo5x8Um",
+      "role": "buyer",
+      "createdAt": "2026-09-28T09:57:39.886Z"
+    },
+    {
+      "_id": "user_1790674868109_03sq1",
+      "name": "abi",
+      "email": "abirami@gmail.com",
+      "password": "$2a$10$OlRZNbKEl6M8xT02NudWeOO5b3.E.J3tFPXJ5hXrcI/0.282q8aUO",
+      "role": "farmer",
+      "createdAt": "2026-09-29T09:41:08.109Z"
+    }
+  ],
+  "products": [
+    {
+      "_id": "prod_1",
+      "cropName": "Tomato",
+      "quantity": 500,
+      "pricePerKg": 28,
+      "harvestDate": "2026-09-20",
+      "state": "Tamil Nadu",
+      "district": "Coimbatore",
+      "villageTown": "Pollachi",
+      "pickupPoint": "Central Mandi",
+      "farmerName": "Ramesh Kumar",
+      "referencePrice": 30,
+      "priceDifference": -2,
+      "farmerBenefit": 0,
+      "consumerSaving": 6.67,
+      "priceStatus": "Below Reference",
+      "createdAt": "2026-09-23T06:01:02.421Z"
+    },
+    {
+      "_id": "prod_2",
+      "cropName": "Potato",
+      "quantity": 800,
+      "pricePerKg": 24,
+      "harvestDate": "2026-09-22",
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "villageTown": "Nakodar",
+      "pickupPoint": "Cold Storage #4",
+      "farmerName": "Harpreet Singh",
+      "referencePrice": 25,
+      "priceDifference": -1,
+      "farmerBenefit": 0,
+      "consumerSaving": 4,
+      "priceStatus": "Fair",
+      "createdAt": "2026-09-24T06:01:02.421Z"
+    },
+    {
+      "_id": "prod_3",
+      "cropName": "Rice",
+      "quantity": 1200,
+      "pricePerKg": 42,
+      "harvestDate": "2026-09-18",
+      "state": "Andhra Pradesh",
+      "district": "East Godavari",
+      "villageTown": "Kakinada",
+      "pickupPoint": "Warehouse Gate 2",
+      "farmerName": "Venkat Rao",
+      "referencePrice": 40,
+      "priceDifference": 2,
+      "farmerBenefit": 5,
+      "consumerSaving": 0,
+      "priceStatus": "Fair",
+      "createdAt": "2026-09-25T06:01:02.421Z"
+    },
+    {
+      "_id": "prod_1790317045308_l35ig",
+      "cropName": "Cucumber",
+      "quantity": 75,
+      "pricePerKg": 30,
+      "harvestDate": "2026-09-24",
+      "state": "Tamil Nadu",
+      "district": "Erode",
+      "villageTown": "Gobi",
+      "pickupPoint": "Gobi bus stand",
+      "farmerName": "Deva",
+      "referencePrice": 28,
+      "priceDifference": 2,
+      "farmerBenefit": 7.14,
+      "consumerSaving": 0,
+      "priceStatus": "Above Reference",
+      "createdAt": "2026-09-25T06:17:25.308Z"
+    },
+    {
+      "_id": "prod_1790674607082_94or7",
+      "cropName": "Tomato",
+      "quantity": 28,
+      "pricePerKg": 30,
+      "harvestDate": "2026-09-29",
+      "state": "Tamil Nadu",
+      "district": "Erode",
+      "villageTown": "Gobi",
+      "pickupPoint": "Gobi bus stand",
+      "farmerName": "abi",
+      "referencePrice": 30,
+      "priceDifference": 0,
+      "farmerBenefit": 0,
+      "consumerSaving": 0,
+      "priceStatus": "Fair",
+      "createdAt": "2026-09-29T09:36:47.082Z"
+    }
+  ],
+  "orders": [
+    {
+      "_id": "order_1",
+      "productId": "prod_1",
+      "cropName": "Tomato",
+      "farmerName": "Ramesh Kumar",
+      "buyerName": "Suresh Patel",
+      "buyerEmail": "buyer@gmail.com",
+      "quantity": 50,
+      "pricePerKg": 28,
+      "totalPrice": 1400,
+      "status": "Accepted",
+      "createdAt": "2026-09-25T01:01:02.421Z"
+    },
+    {
+      "_id": "order_1790317162114_rme3f",
+      "productId": "prod_1790317045308_l35ig",
+      "cropName": "Cucumber",
+      "farmerName": "Deva",
+      "buyerName": "Dhakshatha",
+      "buyerEmail": "dhakshathamanjunath@gmail.com",
+      "quantity": 5,
+      "pricePerKg": 30,
+      "totalPrice": 150,
+      "status": "Accepted",
+      "createdAt": "2026-09-25T06:19:22.114Z"
+    },
+    {
+      "_id": "order_1790589693705_bito8",
+      "productId": "prod_1790317045308_l35ig",
+      "cropName": "Cucumber",
+      "farmerName": "Deva",
+      "buyerName": "dhakshu",
+      "buyerEmail": "310625243041@eec.srmrmp.edu.in",
+      "quantity": 10,
+      "pricePerKg": 30,
+      "totalPrice": 300,
+      "status": "Accepted",
+      "createdAt": "2026-09-28T10:01:33.705Z"
+    },
+    {
+      "_id": "order_1790589901198_7o3zq",
+      "productId": "prod_1790317045308_l35ig",
+      "cropName": "Cucumber",
+      "farmerName": "Deva",
+      "buyerName": "dhakshu",
+      "buyerEmail": "310625243041@eec.srmrmp.edu.in",
+      "quantity": 10,
+      "pricePerKg": 30,
+      "totalPrice": 300,
+      "status": "Accepted",
+      "createdAt": "2026-09-28T10:05:01.198Z"
+    },
+    {
+      "_id": "order_1790674763565_xrvsw",
+      "productId": "prod_1790674607082_94or7",
+      "cropName": "Tomato",
+      "farmerName": "abi",
+      "buyerName": "Dhakshatha",
+      "buyerEmail": "dhakshathamanjunath@gmail.com",
+      "quantity": 2,
+      "pricePerKg": 30,
+      "totalPrice": 60,
+      "deliveryLocation": {
+        "address": "No.1 Silapathikaramm street mgr nagar chennai- 78",
+        "city": "CHENNAI",
+        "state": "Tamil Nadu",
+        "pincode": "600078",
+        "latitude": 13.033162779683133,
+        "longitude": 80.17804968639764,
+        "method": "current"
+      },
+      "status": "Accepted",
+      "createdAt": "2026-09-29T09:39:23.565Z"
+    }
+  ]
+}

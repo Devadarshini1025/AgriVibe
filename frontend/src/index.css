@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 14px;
+}
+
+.btn {
+    border-radius: 8px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+}
+
+.navbar-brand {
+    letter-spacing: 0.3px;
+}
+
+.page-title {
+    font-weight: 700;
+}
+
+.stat-card {
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.crop-card {
+    transition: transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.crop-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+.price-badge {
+    font-size: 0.85rem;
+}
+
+.hero-icon {
+    width: 250px;
+    height: 250px;
+}
+
+@media (max-width: 768px) {
+    .hero-icon {
+        width: 180px;
+        height: 180px;
+    }
+}
