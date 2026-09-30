@@ -1,39 +1,25 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+
 import { useLanguage } from "../context/LanguageContext";
+import API_URL from "../apiConfig";
 
 function Payment() {
-    const { t } = useLanguage();
+    const { t, tCrop, language } = useLanguage();
 
     const navigate = useNavigate();
     const { orderId } = useParams();
 
     const [order, setOrder] = useState(null);
-
-    const [selectedMethod, setSelectedMethod] =
-        useState("UPI");
-
-    const [loading, setLoading] =
-        useState(true);
-
-    const [processing, setProcessing] =
-        useState(false);
-
-    const [error, setError] =
-        useState("");
-
-    const [success, setSuccess] =
-        useState(false);
-
-    const [paymentId, setPaymentId] =
-        useState("");
-
-    const [paymentStatus, setPaymentStatus] =
-        useState("");
-
-    const [paidAt, setPaidAt] =
-        useState(null);
+    const [selectedMethod, setSelectedMethod] = useState("UPI");
+    const [loading, setLoading] = useState(true);
+    const [processing, setProcessing] = useState(false);
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState(false);
+    const [paymentId, setPaymentId] = useState("");
+    const [paymentStatus, setPaymentStatus] = useState("");
+    const [paidAt, setPaidAt] = useState(null);
 
     /*
     =====================================================
@@ -43,21 +29,15 @@ function Payment() {
 
     const getCurrentUser = () => {
         try {
-            const savedUser =
-                localStorage.getItem("user");
+            const savedUser = localStorage.getItem("user");
 
             if (!savedUser) {
                 return null;
             }
 
             return JSON.parse(savedUser);
-
         } catch (err) {
-            console.error(
-                "Unable to read user:",
-                err
-            );
-
+            console.error("Unable to read user:", err);
             return null;
         }
     };
@@ -69,16 +49,12 @@ function Payment() {
     */
 
     useEffect(() => {
-
         const loadOrder = async () => {
-
             try {
-
                 setLoading(true);
                 setError("");
 
-                const user =
-                    getCurrentUser();
+                const user = getCurrentUser();
 
                 if (!user) {
                     navigate("/login");
@@ -86,47 +62,32 @@ function Payment() {
                 }
 
                 if (user.role !== "buyer") {
-
                     setError(
-                        "Only buyers can make payments."
+                        t("onlyBuyersCanMakePayments") ||
+                            "Only buyers can make payments."
                     );
 
                     setLoading(false);
-
                     return;
                 }
 
                 if (!orderId) {
-
                     setError(
-                        "Order ID is missing."
+                        t("orderIdMissing") ||
+                            "Order ID is missing."
                     );
 
                     setLoading(false);
-
                     return;
                 }
 
-                /*
-                =========================================
-                LOAD ORDER
-                =========================================
-                */
-
-                const response =
-                    await axios.get(
-                        `http://localhost:5000/api/orders/${orderId}`
-                    );
+                const response = await axios.get(
+                    `${API_URL}/api/orders/${orderId}`
+                );
 
                 const loadedOrder =
                     response.data?.order ||
                     response.data;
-
-                /*
-                =========================================
-                CHECK BUYER
-                =========================================
-                */
 
                 if (
                     loadedOrder?.buyerEmail &&
@@ -134,34 +95,19 @@ function Payment() {
                     loadedOrder.buyerEmail.toLowerCase() !==
                         user.email.toLowerCase()
                 ) {
-
                     setError(
-                        "You are not allowed to pay for this order."
+                        t("notAllowedToPay") ||
+                            "You are not allowed to pay for this order."
                     );
 
                     setLoading(false);
-
                     return;
                 }
 
-                setOrder(
-                    loadedOrder
-                );
+                setOrder(loadedOrder);
 
-                /*
-                =========================================
-                ALREADY PAID
-                =========================================
-                */
-
-                if (
-                    loadedOrder?.paymentStatus ===
-                    "Paid"
-                ) {
-
-                    setPaymentStatus(
-                        "Paid"
-                    );
+                if (loadedOrder?.paymentStatus === "Paid") {
+                    setPaymentStatus("Paid");
 
                     setPaymentId(
                         loadedOrder.paymentId || ""
@@ -174,26 +120,12 @@ function Payment() {
                     setSuccess(true);
                 }
 
-                /*
-                =========================================
-                COD
-                =========================================
-                */
-
-                if (
-                    loadedOrder?.paymentStatus ===
-                    "COD"
-                ) {
-
-                    setPaymentStatus(
-                        "COD"
-                    );
-
+                if (loadedOrder?.paymentStatus === "COD") {
+                    setPaymentStatus("COD");
+                    setSelectedMethod("Cash on Delivery");
                     setSuccess(true);
                 }
-
             } catch (err) {
-
                 console.error(
                     "Payment page error:",
                     err
@@ -201,19 +133,16 @@ function Payment() {
 
                 setError(
                     err.response?.data?.message ||
-                    "Unable to load order."
+                        t("unableToLoadOrder") ||
+                        "Unable to load order."
                 );
-
             } finally {
-
                 setLoading(false);
-
             }
         };
 
         loadOrder();
-
-    }, [orderId, navigate]);
+    }, [orderId, navigate, language]);
 
     /*
     =====================================================
@@ -222,14 +151,11 @@ function Payment() {
     */
 
     const handlePayment = async () => {
-
         try {
-
             setProcessing(true);
             setError("");
 
-            const user =
-                getCurrentUser();
+            const user = getCurrentUser();
 
             if (!user) {
                 navigate("/login");
@@ -243,22 +169,19 @@ function Payment() {
             =========================================
             */
 
-            const createResponse =
-                await axios.post(
-                    "http://localhost:5000/api/payments/create",
-                    {
-                        orderId: orderId,
-                        buyerEmail: user.email
-                    }
-                );
+            const createResponse = await axios.post(
+                `${API_URL}/api/payments/create`,
+                {
+                    orderId: orderId,
+                    buyerEmail: user.email
+                }
+            );
 
-            if (
-                !createResponse.data?.success
-            ) {
-
+            if (!createResponse.data?.success) {
                 throw new Error(
                     createResponse.data?.message ||
-                    "Unable to create payment."
+                        t("unableToCreatePayment") ||
+                        "Unable to create payment."
                 );
             }
 
@@ -268,12 +191,8 @@ function Payment() {
             =========================================
             */
 
-            await new Promise(
-                (resolve) =>
-                    setTimeout(
-                        resolve,
-                        1000
-                    )
+            await new Promise((resolve) =>
+                setTimeout(resolve, 1000)
             );
 
             /*
@@ -283,33 +202,27 @@ function Payment() {
             =========================================
             */
 
-            const confirmResponse =
-                await axios.post(
-                    "http://localhost:5000/api/payments/confirm",
-                    {
-                        orderId: orderId,
-                        buyerEmail: user.email,
-                        paymentMethod:
-                            selectedMethod
-                    }
-                );
+            const confirmResponse = await axios.post(
+                `${API_URL}/api/payments/confirm`,
+                {
+                    orderId: orderId,
+                    buyerEmail: user.email,
+                    paymentMethod: selectedMethod
+                }
+            );
 
-            if (
-                !confirmResponse.data?.success
-            ) {
-
+            if (!confirmResponse.data?.success) {
                 throw new Error(
                     confirmResponse.data?.message ||
-                    "Payment failed."
+                        t("paymentFailed") ||
+                        "Payment failed."
                 );
             }
 
-            const result =
-                confirmResponse.data;
+            const result = confirmResponse.data;
 
             setPaymentStatus(
-                result.paymentStatus ||
-                "Paid"
+                result.paymentStatus || "Paid"
             );
 
             setPaymentId(
@@ -323,13 +236,9 @@ function Payment() {
             setSuccess(true);
 
             if (result.order) {
-                setOrder(
-                    result.order
-                );
+                setOrder(result.order);
             }
-
         } catch (err) {
-
             console.error(
                 "Demo payment error:",
                 err
@@ -337,14 +246,12 @@ function Payment() {
 
             setError(
                 err.response?.data?.message ||
-                err.message ||
-                "Payment failed. Please try again."
+                    err.message ||
+                    t("paymentFailedTryAgain") ||
+                    "Payment failed. Please try again."
             );
-
         } finally {
-
             setProcessing(false);
-
         }
     };
 
@@ -355,23 +262,19 @@ function Payment() {
     */
 
     if (loading) {
-
         return (
             <div className="container py-5">
-
                 <div className="text-center">
-
                     <div
                         className="spinner-border text-success"
                         role="status"
                     />
 
                     <p className="mt-3">
-                        Loading payment...
+                        {t("loadingPayment") ||
+                            "Loading payment..."}
                     </p>
-
                 </div>
-
             </div>
         );
     }
@@ -383,14 +286,12 @@ function Payment() {
     */
 
     if (error && !order) {
-
         return (
             <div className="container py-5">
-
                 <div className="alert alert-danger">
-
                     <h5>
-                        Payment Error
+                        {t("paymentError") ||
+                            "Payment Error"}
                     </h5>
 
                     <p className="mb-3">
@@ -405,11 +306,10 @@ function Payment() {
                             )
                         }
                     >
-                        Back to Orders
+                        {t("backToOrders") ||
+                            "Back to Orders"}
                     </button>
-
                 </div>
-
             </div>
         );
     }
@@ -421,80 +321,79 @@ function Payment() {
     */
 
     if (success) {
-
         return (
             <div className="container py-5">
-
-                <div
-                    className="row justify-content-center"
-                >
-
+                <div className="row justify-content-center">
                     <div className="col-lg-7">
+                        <div className="card border-0 shadow-lg">
+                            <div className="card-body text-center p-5">
 
-                        <div
-                            className="card border-0 shadow-lg"
-                        >
-
-                            <div
-                                className="card-body text-center p-5"
-                            >
-
-                                <div
-                                    className="display-1 mb-3"
-                                >
-                                    {paymentStatus ===
-                                    "COD"
+                                <div className="display-1 mb-3">
+                                    {paymentStatus === "COD"
                                         ? "📦"
                                         : "✅"}
                                 </div>
 
-                                <h2
-                                    className="text-success fw-bold"
-                                >
-                                    {paymentStatus ===
-                                    "COD"
-                                        ? "Cash on Delivery Selected"
-                                        : "Payment Successful!"}
+                                <h2 className="text-success fw-bold">
+                                    {paymentStatus === "COD"
+                                        ? t(
+                                              "cashOnDeliverySelected"
+                                          ) ||
+                                          "Cash on Delivery Selected"
+                                        : t(
+                                              "paymentSuccessful"
+                                          ) ||
+                                          "Payment Successful!"}
                                 </h2>
 
                                 <p className="text-muted">
-                                    {paymentStatus ===
-                                    "COD"
-                                        ? "Your order has been placed with Cash on Delivery."
-                                        : "Your AgriVibe demo payment has been completed successfully."}
+                                    {paymentStatus === "COD"
+                                        ? t(
+                                              "orderPlacedWithCOD"
+                                          ) ||
+                                          "Your order has been placed with Cash on Delivery."
+                                        : t(
+                                              "agrivibeDemoPaymentCompleted"
+                                          ) ||
+                                          "Your AgriVibe demo payment has been completed successfully."}
                                 </p>
 
-                                <div
-                                    className="alert alert-light border text-start mt-4"
-                                >
+                                <div className="alert alert-light border text-start mt-4">
 
                                     <h5 className="fw-bold">
-                                        Order Summary
+                                        {t("orderSummary") ||
+                                            "Order Summary"}
                                     </h5>
 
                                     <hr />
 
                                     <p>
                                         <strong>
-                                            Crop:
+                                            {t("crop") ||
+                                                "Crop"}:
                                         </strong>{" "}
-                                        {order?.cropName}
+                                        {tCrop(
+                                            order?.cropName
+                                        )}
                                     </p>
 
                                     <p>
                                         <strong>
-                                            Quantity:
+                                            {t("quantity") ||
+                                                "Quantity"}:
                                         </strong>{" "}
                                         {order?.quantity} kg
                                     </p>
 
                                     <p>
                                         <strong>
-                                            Price:
+                                            {t("price") ||
+                                                "Price"}:
                                         </strong>{" "}
                                         ₹
                                         {Number(
-                                            order?.pricePerKg || 0
+                                            order?.pricePerKg ||
+                                                0
                                         ).toLocaleString(
                                             "en-IN"
                                         )}
@@ -503,11 +402,13 @@ function Payment() {
 
                                     <p>
                                         <strong>
-                                            Total:
+                                            {t("total") ||
+                                                "Total"}:
                                         </strong>{" "}
                                         ₹
                                         {Number(
-                                            order?.totalPrice || 0
+                                            order?.totalPrice ||
+                                                0
                                         ).toLocaleString(
                                             "en-IN"
                                         )}
@@ -515,27 +416,50 @@ function Payment() {
 
                                     <p>
                                         <strong>
-                                            Payment Method:
+                                            {t(
+                                                "paymentMethod"
+                                            ) ||
+                                                "Payment Method"}:
                                         </strong>{" "}
-                                        {selectedMethod}
+                                        {selectedMethod ===
+                                        "Cash on Delivery"
+                                            ? t(
+                                                  "cashOnDelivery"
+                                              ) ||
+                                              "Cash on Delivery"
+                                            : selectedMethod}
                                     </p>
 
                                     <p>
                                         <strong>
-                                            Payment Status:
+                                            {t(
+                                                "paymentStatus"
+                                            ) ||
+                                                "Payment Status"}:
                                         </strong>{" "}
 
-                                        <span
-                                            className="badge bg-success"
-                                        >
-                                            {paymentStatus}
+                                        <span className="badge bg-success">
+                                            {paymentStatus ===
+                                            "Paid"
+                                                ? t("paid") ||
+                                                  "Paid"
+                                                : paymentStatus ===
+                                                  "COD"
+                                                ? t(
+                                                      "cashOnDelivery"
+                                                  ) ||
+                                                  "Cash on Delivery"
+                                                : paymentStatus}
                                         </span>
                                     </p>
 
                                     {paymentId && (
                                         <p>
                                             <strong>
-                                                Payment ID:
+                                                {t(
+                                                    "paymentId"
+                                                ) ||
+                                                    "Payment ID"}:
                                             </strong>{" "}
 
                                             <span className="text-success">
@@ -547,7 +471,8 @@ function Payment() {
                                     {paidAt && (
                                         <p>
                                             <strong>
-                                                Paid At:
+                                                {t("paidAt") ||
+                                                    "Paid At"}:
                                             </strong>{" "}
 
                                             {new Date(
@@ -557,26 +482,30 @@ function Payment() {
                                             )}
                                         </p>
                                     )}
-
                                 </div>
 
-                                <div
-                                    className="alert alert-info"
-                                >
+                                <div className="alert alert-info">
                                     <strong>
-                                        Demo Payment
+                                        {t(
+                                            "demoPayment"
+                                        ) ||
+                                            "Demo Payment"}
                                     </strong>
 
                                     <br />
 
-                                    No real money was transferred.
-                                    This payment is simulated for
-                                    the AgriVibe prototype.
+                                    {t(
+                                        "noRealMoneyTransferred"
+                                    ) ||
+                                        "No real money was transferred."}{" "}
+
+                                    {t(
+                                        "paymentSimulatedPrototype"
+                                    ) ||
+                                        "This payment is simulated for the AgriVibe prototype."}
                                 </div>
 
-                                <div
-                                    className="d-flex gap-2 justify-content-center flex-wrap"
-                                >
+                                <div className="d-flex gap-2 justify-content-center flex-wrap">
 
                                     <button
                                         className="btn btn-success"
@@ -586,7 +515,10 @@ function Payment() {
                                             )
                                         }
                                     >
-                                        View My Orders
+                                        {t(
+                                            "viewMyOrders"
+                                        ) ||
+                                            "View My Orders"}
                                     </button>
 
                                     <button
@@ -597,19 +529,18 @@ function Payment() {
                                             )
                                         }
                                     >
-                                        Continue Shopping
+                                        {t(
+                                            "continueShopping"
+                                        ) ||
+                                            "Continue Shopping"}
                                     </button>
 
                                 </div>
 
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
         );
     }
@@ -630,71 +561,83 @@ function Payment() {
                     <div className="text-center mb-4">
 
                         <h1 className="fw-bold text-success">
-                            🌱 AgriVibe Pay
+                            🌱 {t("appName") ||
+                                "AgriVibe"}{" "}
+                            {t("pay") || "Pay"}
                         </h1>
 
                         <p className="text-muted">
-                            Secure Demo Payment
+                            {t(
+                                "secureDemoPayment"
+                            ) ||
+                                "Secure Demo Payment"}
                         </p>
 
                     </div>
 
                     {error && (
-                        <div
-                            className="alert alert-danger"
-                        >
+                        <div className="alert alert-danger">
                             {error}
                         </div>
                     )}
 
                     <div className="row g-4">
 
-                        {/* =================================
-                            ORDER SUMMARY
-                        ================================= */}
+                        {/* ORDER SUMMARY */}
 
                         <div className="col-md-6">
 
-                            <div
-                                className="card border-0 shadow-sm h-100"
-                            >
+                            <div className="card border-0 shadow-sm h-100">
 
                                 <div className="card-body p-4">
 
                                     <h4 className="fw-bold">
-                                        🧾 Order Summary
+                                        🧾{" "}
+                                        {t(
+                                            "orderSummary"
+                                        ) ||
+                                            "Order Summary"}
                                     </h4>
 
                                     <hr />
 
                                     <p>
                                         <strong>
-                                            Crop:
+                                            {t("crop") ||
+                                                "Crop"}:
                                         </strong>{" "}
-                                        {order?.cropName}
+                                        {tCrop(
+                                            order?.cropName
+                                        )}
                                     </p>
 
                                     <p>
                                         <strong>
-                                            Farmer:
+                                            {t("farmer") ||
+                                                "Farmer"}:
                                         </strong>{" "}
                                         {order?.farmerName}
                                     </p>
 
                                     <p>
                                         <strong>
-                                            Quantity:
+                                            {t(
+                                                "quantity"
+                                            ) ||
+                                                "Quantity"}:
                                         </strong>{" "}
                                         {order?.quantity} kg
                                     </p>
 
                                     <p>
                                         <strong>
-                                            Price:
+                                            {t("price") ||
+                                                "Price"}:
                                         </strong>{" "}
                                         ₹
                                         {Number(
-                                            order?.pricePerKg || 0
+                                            order?.pricePerKg ||
+                                                0
                                         ).toLocaleString(
                                             "en-IN"
                                         )}
@@ -703,20 +646,20 @@ function Payment() {
 
                                     <hr />
 
-                                    <div
-                                        className="d-flex justify-content-between"
-                                    >
+                                    <div className="d-flex justify-content-between">
 
                                         <strong>
-                                            Total Amount
+                                            {t(
+                                                "totalAmount"
+                                            ) ||
+                                                "Total Amount"}
                                         </strong>
 
-                                        <strong
-                                            className="text-success fs-4"
-                                        >
+                                        <strong className="text-success fs-4">
                                             ₹
                                             {Number(
-                                                order?.totalPrice || 0
+                                                order?.totalPrice ||
+                                                    0
                                             ).toLocaleString(
                                                 "en-IN"
                                             )}
@@ -725,34 +668,40 @@ function Payment() {
                                     </div>
 
                                     {order?.deliveryLocation && (
-                                        <div
-                                            className="mt-4"
-                                        >
+                                        <div className="mt-4">
 
                                             <h6 className="fw-bold">
-                                                📍 Delivery Location
+                                                📍{" "}
+                                                {t(
+                                                    "deliveryLocation"
+                                                ) ||
+                                                    "Delivery Location"}
                                             </h6>
 
                                             <p className="small text-muted mb-0">
                                                 {
-                                                    order.deliveryLocation
+                                                    order
+                                                        .deliveryLocation
                                                         .address
                                                 }
                                             </p>
 
                                             <p className="small text-muted">
                                                 {
-                                                    order.deliveryLocation
+                                                    order
+                                                        .deliveryLocation
                                                         .city
                                                 }
                                                 ,{" "}
                                                 {
-                                                    order.deliveryLocation
+                                                    order
+                                                        .deliveryLocation
                                                         .state
                                                 }{" "}
                                                 -{" "}
                                                 {
-                                                    order.deliveryLocation
+                                                    order
+                                                        .deliveryLocation
                                                         .pincode
                                                 }
                                             </p>
@@ -766,25 +715,27 @@ function Payment() {
 
                         </div>
 
-                        {/* =================================
-                            PAYMENT METHOD
-                        ================================= */}
+                        {/* PAYMENT METHOD */}
 
                         <div className="col-md-6">
 
-                            <div
-                                className="card border-0 shadow-sm h-100"
-                            >
+                            <div className="card border-0 shadow-sm h-100">
 
                                 <div className="card-body p-4">
 
                                     <h4 className="fw-bold">
-                                        💳 Payment Method
+                                        💳{" "}
+                                        {t(
+                                            "paymentMethod"
+                                        ) ||
+                                            "Payment Method"}
                                     </h4>
 
                                     <p className="text-muted small">
-                                        Choose a demo payment
-                                        method.
+                                        {t(
+                                            "chooseDemoPaymentMethod"
+                                        ) ||
+                                            "Choose a demo payment method."}
                                     </p>
 
                                     {/* UPI */}
@@ -802,8 +753,7 @@ function Payment() {
                                             )
                                         }
                                         style={{
-                                            cursor:
-                                                "pointer"
+                                            cursor: "pointer"
                                         }}
                                     >
 
@@ -833,13 +783,15 @@ function Payment() {
                                                 <br />
 
                                                 <small className="text-muted">
-                                                    Demo UPI payment
+                                                    {t(
+                                                        "demoUPIPayment"
+                                                    ) ||
+                                                        "Demo UPI payment"}
                                                 </small>
 
                                             </label>
 
                                         </div>
-
                                     </div>
 
                                     {/* CARD */}
@@ -857,8 +809,7 @@ function Payment() {
                                             )
                                         }
                                         style={{
-                                            cursor:
-                                                "pointer"
+                                            cursor: "pointer"
                                         }}
                                     >
 
@@ -882,19 +833,25 @@ function Payment() {
                                             <label className="form-check-label">
 
                                                 <strong>
-                                                    💳 Card
+                                                    💳{" "}
+                                                    {t(
+                                                        "card"
+                                                    ) ||
+                                                        "Card"}
                                                 </strong>
 
                                                 <br />
 
                                                 <small className="text-muted">
-                                                    Demo card payment
+                                                    {t(
+                                                        "demoCardPayment"
+                                                    ) ||
+                                                        "Demo card payment"}
                                                 </small>
 
                                             </label>
 
                                         </div>
-
                                     </div>
 
                                     {/* COD */}
@@ -912,8 +869,7 @@ function Payment() {
                                             )
                                         }
                                         style={{
-                                            cursor:
-                                                "pointer"
+                                            cursor: "pointer"
                                         }}
                                     >
 
@@ -937,19 +893,25 @@ function Payment() {
                                             <label className="form-check-label">
 
                                                 <strong>
-                                                    📦 Cash on Delivery
+                                                    📦{" "}
+                                                    {t(
+                                                        "cashOnDelivery"
+                                                    ) ||
+                                                        "Cash on Delivery"}
                                                 </strong>
 
                                                 <br />
 
                                                 <small className="text-muted">
-                                                    Pay when the crop is delivered
+                                                    {t(
+                                                        "payWhenDelivered"
+                                                    ) ||
+                                                        "Pay when the crop is delivered"}
                                                 </small>
 
                                             </label>
 
                                         </div>
-
                                     </div>
 
                                     <button
@@ -969,15 +931,28 @@ function Payment() {
                                                     role="status"
                                                 />
 
-                                                Processing...
+                                                {t(
+                                                    "processing"
+                                                ) ||
+                                                    "Processing..."}
                                             </>
                                         ) : (
                                             <>
                                                 🔒{" "}
+
                                                 {selectedMethod ===
                                                 "Cash on Delivery"
-                                                    ? "Confirm Order"
-                                                    : "Pay ₹" +
+                                                    ? t(
+                                                          "confirmOrder"
+                                                      ) ||
+                                                      "Confirm Order"
+                                                    : (
+                                                          t(
+                                                              "payAmount"
+                                                          ) ||
+                                                          "Pay"
+                                                      ) +
+                                                      " ₹" +
                                                       Number(
                                                           order?.totalPrice ||
                                                               0
@@ -989,15 +964,20 @@ function Payment() {
 
                                     </button>
 
-                                    <div
-                                        className="alert alert-warning mt-3 small mb-0"
-                                    >
+                                    <div className="alert alert-warning mt-3 small mb-0">
+
                                         <strong>
-                                            Demo Mode:
+                                            {t(
+                                                "demoMode"
+                                            ) ||
+                                                "Demo Mode"}:
                                         </strong>{" "}
-                                        No real payment or
-                                        financial information
-                                        is processed.
+
+                                        {t(
+                                            "noRealPayment"
+                                        ) ||
+                                            "No real payment or financial information is processed."}
+
                                     </div>
 
                                 </div>

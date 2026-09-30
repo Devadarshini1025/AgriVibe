@@ -4613,4 +4613,1476 @@ const translations = {
 })
 };
 
+// ======================================================
+// PAYMENT PAGE TRANSLATIONS
+// English + 22 Indian Languages
+// ======================================================
+
+const paymentTranslations = {
+
+    // ==================================================
+    // ENGLISH
+    // ==================================================
+    en: {
+        paymentSuccessful: "Payment Successful!",
+        cashOnDeliverySelected: "Cash on Delivery Selected",
+        orderPlacedWithCOD:
+            "Your order has been placed with Cash on Delivery.",
+        agrivibeDemoPaymentCompleted:
+            "Your AgriVibe demo payment has been completed successfully.",
+        orderSummary: "Order Summary",
+        crop: "Crop",
+        quantity: "Quantity",
+        price: "Price",
+        total: "Total",
+        paymentMethod: "Payment Method",
+        paymentStatus: "Payment Status",
+        paid: "Paid",
+        paymentId: "Payment ID",
+        paidAt: "Paid At",
+        demoPayment: "Demo Payment",
+        noRealMoneyTransferred:
+            "No real money was transferred.",
+        paymentSimulatedPrototype:
+            "This payment is simulated for the AgriVibe prototype.",
+        viewMyOrders: "View My Orders",
+        continueShopping: "Continue Shopping",
+        secureDemoPayment: "Secure Demo Payment",
+        farmer: "Farmer",
+        totalAmount: "Total Amount",
+        deliveryLocation: "Delivery Location",
+        chooseDemoPaymentMethod:
+            "Choose a demo payment method.",
+        demoUPIPayment: "Demo UPI payment",
+        card: "Card",
+        demoCardPayment: "Demo card payment",
+        cashOnDelivery: "Cash on Delivery",
+        payWhenDelivered:
+            "Pay when the crop is delivered",
+        processing: "Processing...",
+        confirmOrder: "Confirm Order",
+        payAmount: "Pay",
+        demoMode: "Demo Mode",
+        noRealPayment:
+            "No real payment or financial information is processed.",
+        loadingPayment: "Loading payment...",
+        paymentError: "Payment Error",
+        backToOrders: "Back to Orders",
+        onlyBuyersCanMakePayments:
+            "Only buyers can make payments.",
+        orderIdMissing: "Order ID is missing.",
+        notAllowedToPay:
+            "You are not allowed to pay for this order.",
+        unableToLoadOrder:
+            "Unable to load order.",
+        unableToCreatePayment:
+            "Unable to create payment.",
+        paymentFailed: "Payment failed.",
+        paymentFailedTryAgain:
+            "Payment failed. Please try again."
+    },
+
+    // ==================================================
+    // ASSAMESE
+    // ==================================================
+    as: {
+        paymentSuccessful: "পেমেণ্ট সফল হৈছে!",
+        cashOnDeliverySelected: "কেছ অন ডেলিভাৰী নিৰ্বাচন কৰা হৈছে",
+        orderPlacedWithCOD:
+            "আপোনাৰ অৰ্ডাৰ কেছ অন ডেলিভাৰীৰ সৈতে দিয়া হৈছে।",
+        agrivibeDemoPaymentCompleted:
+            "আপোনাৰ AgriVibe ডেমো পেমেণ্ট সফলভাৱে সম্পূৰ্ণ হৈছে।",
+        orderSummary: "অৰ্ডাৰৰ সাৰাংশ",
+        crop: "শস্য",
+        quantity: "পৰিমাণ",
+        price: "মূল্য",
+        total: "মুঠ",
+        paymentMethod: "পেমেণ্ট পদ্ধতি",
+        paymentStatus: "পেমেণ্টৰ অৱস্থা",
+        paid: "পৰিশোধ কৰা হৈছে",
+        paymentId: "পেমেণ্ট ID",
+        paidAt: "পৰিশোধৰ সময়",
+        demoPayment: "ডেমো পেমেণ্ট",
+        noRealMoneyTransferred:
+            "কোনো প্ৰকৃত ধন স্থানান্তৰ কৰা হোৱা নাই।",
+        paymentSimulatedPrototype:
+            "এই পেমেণ্ট AgriVibe প্ৰট'টাইপৰ বাবে অনুকৰণ কৰা হৈছে।",
+        viewMyOrders: "মোৰ অৰ্ডাৰসমূহ চাওক",
+        continueShopping: "ক্ৰয় অব্যাহত ৰাখক",
+        secureDemoPayment: "সুৰক্ষিত ডেমো পেমেণ্ট",
+        farmer: "কৃষক",
+        totalAmount: "মুঠ পৰিমাণ",
+        deliveryLocation: "ডেলিভাৰী স্থান",
+        chooseDemoPaymentMethod:
+            "এটা ডেমো পেমেণ্ট পদ্ধতি বাছনি কৰক।",
+        demoUPIPayment: "ডেমো UPI পেমেণ্ট",
+        card: "কাৰ্ড",
+        demoCardPayment: "ডেমো কাৰ্ড পেমেণ্ট",
+        cashOnDelivery: "কেছ অন ডেলিভাৰী",
+        payWhenDelivered:
+            "শস্য ডেলিভাৰী কৰাৰ সময়ত পৰিশোধ কৰক",
+        processing: "প্ৰক্ৰিয়াকৰণ হৈ আছে...",
+        confirmOrder: "অৰ্ডাৰ নিশ্চিত কৰক",
+        payAmount: "পৰিশোধ কৰক",
+        demoMode: "ডেমো মোড",
+        noRealPayment:
+            "কোনো প্ৰকৃত ধন বা বিত্তীয় তথ্য প্ৰক্ৰিয়াকৰণ কৰা নহয়।",
+        loadingPayment: "পেমেণ্ট লোড হৈ আছে...",
+        paymentError: "পেমেণ্ট ত্ৰুটি",
+        backToOrders: "অৰ্ডাৰলৈ উভতি যাওক",
+        onlyBuyersCanMakePayments:
+            "কেৱল ক্ৰেতাসকলেহে পেমেণ্ট কৰিব পাৰে।",
+        orderIdMissing: "অৰ্ডাৰ ID পোৱা নগ'ল।",
+        notAllowedToPay:
+            "এই অৰ্ডাৰৰ বাবে পেমেণ্ট কৰিবলৈ আপোনাৰ অনুমতি নাই।",
+        unableToLoadOrder: "অৰ্ডাৰ লোড কৰিব পৰা নগ'ল।",
+        unableToCreatePayment:
+            "পেমেণ্ট সৃষ্টি কৰিব পৰা নগ'ল।",
+        paymentFailed: "পেমেণ্ট বিফল হৈছে।",
+        paymentFailedTryAgain:
+            "পেমেণ্ট বিফল হৈছে। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।"
+    },
+
+    // ==================================================
+    // BENGALI
+    // ==================================================
+    bn: {
+        paymentSuccessful: "পেমেন্ট সফল হয়েছে!",
+        cashOnDeliverySelected: "ক্যাশ অন ডেলিভারি নির্বাচিত হয়েছে",
+        orderPlacedWithCOD:
+            "আপনার অর্ডার ক্যাশ অন ডেলিভারির মাধ্যমে দেওয়া হয়েছে।",
+        agrivibeDemoPaymentCompleted:
+            "আপনার AgriVibe ডেমো পেমেন্ট সফলভাবে সম্পন্ন হয়েছে।",
+        orderSummary: "অর্ডারের সারাংশ",
+        crop: "ফসল",
+        quantity: "পরিমাণ",
+        price: "মূল্য",
+        total: "মোট",
+        paymentMethod: "পেমেন্ট পদ্ধতি",
+        paymentStatus: "পেমেন্টের অবস্থা",
+        paid: "পরিশোধিত",
+        paymentId: "পেমেন্ট ID",
+        paidAt: "পেমেন্টের সময়",
+        demoPayment: "ডেমো পেমেন্ট",
+        noRealMoneyTransferred:
+            "কোনো প্রকৃত অর্থ স্থানান্তর করা হয়নি।",
+        paymentSimulatedPrototype:
+            "এই পেমেন্ট AgriVibe প্রোটোটাইপের জন্য সিমুলেট করা হয়েছে।",
+        viewMyOrders: "আমার অর্ডার দেখুন",
+        continueShopping: "কেনাকাটা চালিয়ে যান",
+        secureDemoPayment: "নিরাপদ ডেমো পেমেন্ট",
+        farmer: "কৃষক",
+        totalAmount: "মোট পরিমাণ",
+        deliveryLocation: "ডেলিভারি স্থান",
+        chooseDemoPaymentMethod:
+            "একটি ডেমো পেমেন্ট পদ্ধতি নির্বাচন করুন।",
+        demoUPIPayment: "ডেমো UPI পেমেন্ট",
+        card: "কার্ড",
+        demoCardPayment: "ডেমো কার্ড পেমেন্ট",
+        cashOnDelivery: "ক্যাশ অন ডেলিভারি",
+        payWhenDelivered:
+            "ফসল ডেলিভারি হলে পেমেন্ট করুন",
+        processing: "প্রক্রিয়াধীন...",
+        confirmOrder: "অর্ডার নিশ্চিত করুন",
+        payAmount: "পেমেন্ট করুন",
+        demoMode: "ডেমো মোড",
+        noRealPayment:
+            "কোনো প্রকৃত অর্থ বা আর্থিক তথ্য প্রক্রিয়া করা হয় না।",
+        loadingPayment: "পেমেন্ট লোড হচ্ছে...",
+        paymentError: "পেমেন্ট ত্রুটি",
+        backToOrders: "অর্ডারে ফিরে যান",
+        onlyBuyersCanMakePayments:
+            "শুধুমাত্র ক্রেতারা পেমেন্ট করতে পারেন।",
+        orderIdMissing: "অর্ডার ID পাওয়া যায়নি।",
+        notAllowedToPay:
+            "এই অর্ডারের জন্য পেমেন্ট করার অনুমতি আপনার নেই।",
+        unableToLoadOrder: "অর্ডার লোড করা যায়নি।",
+        unableToCreatePayment:
+            "পেমেন্ট তৈরি করা যায়নি।",
+        paymentFailed: "পেমেন্ট ব্যর্থ হয়েছে।",
+        paymentFailedTryAgain:
+            "পেমেন্ট ব্যর্থ হয়েছে। আবার চেষ্টা করুন।"
+    },
+
+    // ==================================================
+    // BODO
+    // ==================================================
+    brx: {
+        paymentSuccessful: "पेमेन्ट मोजां जाबाय!",
+        cashOnDeliverySelected: "Cash on Delivery सायख’नाय जाबाय",
+        orderPlacedWithCOD:
+            "नोंथांनि अर्डार Cash on Delivery जों दानाय जाबाय।",
+        agrivibeDemoPaymentCompleted:
+            "नोंथांनि AgriVibe डेमो पेमेन्ट मोजां सम्फन्न जाबाय।",
+        orderSummary: "अर्डारनि सारांश",
+        crop: "स'फ्रा",
+        quantity: "बाहाय",
+        price: "बिसो",
+        total: "आबुं",
+        paymentMethod: "पेमेन्ट पद्धति",
+        paymentStatus: "पेमेन्टनि अवस्था",
+        paid: "सुदाय जाबाय",
+        paymentId: "पेमेन्ट ID",
+        paidAt: "सुदाय समय",
+        demoPayment: "डेमो पेमेन्ट",
+        noRealMoneyTransferred:
+            "जेबो थार थांखि हस्तान्तरण खालामाखै।",
+        paymentSimulatedPrototype:
+            "बे पेमेन्ट AgriVibe प्रोटोटाइपनि थाखाय सिमुलेट खालामनाय।",
+        viewMyOrders: "आंनि अर्डारफोर नाय",
+        continueShopping: "खरिद जारि खालाम",
+        secureDemoPayment: "सुरक्षित डेमो पेमेन्ट",
+        farmer: "हाबा",
+        totalAmount: "आबुं राशि",
+        deliveryLocation: "डेलिभारी जायगा",
+        chooseDemoPaymentMethod:
+            "डेमो पेमेन्ट पद्धति सायख।",
+        demoUPIPayment: "डेमो UPI पेमेन्ट",
+        card: "कार्ड",
+        demoCardPayment: "डेमो कार्ड पेमेन्ट",
+        cashOnDelivery: "Cash on Delivery",
+        payWhenDelivered:
+            "स'फ्रा डेलिभारी खालामनाय समाव सुदाय खालाम",
+        processing: "प्रक्रियाकरण जाबाय...",
+        confirmOrder: "अर्डार फिनथाइ",
+        payAmount: "सुदाय खालाम",
+        demoMode: "डेमो मोड",
+        noRealPayment:
+            "जेबो थार थांखि एबा आर्थिक फोरमायथि प्रक्रियाकरण खालामनाय नङा।",
+        loadingPayment: "पेमेन्ट ल'ड जाबाय...",
+        paymentError: "पेमेन्ट गोरोन्थि",
+        backToOrders: "अर्डारफोरनाव थां",
+        onlyBuyersCanMakePayments:
+            "खरिदारफोरनो पेमेन्ट खालामनो हायो।",
+        orderIdMissing: "अर्डार ID मोनाखै।",
+        notAllowedToPay:
+            "बे अर्डारनि थाखाय पेमेन्ट खालामनो नोंथांहा अनुमति नङा।",
+        unableToLoadOrder: "अर्डार ल'ड खालामनो हायाखै।",
+        unableToCreatePayment:
+            "पेमेन्ट सोरजिनो हायाखै।",
+        paymentFailed: "पेमेन्ट फेल जाबाय।",
+        paymentFailedTryAgain:
+            "पेमेन्ट फेल जाबाय। अननानै फिन नाजा।"
+    },
+
+    // ==================================================
+    // DOGRI
+    // ==================================================
+    doi: {
+        paymentSuccessful: "भुगतान सफल होई गेआ!",
+        cashOnDeliverySelected: "कैश ऑन डिलीवरी चुनी गेई ऐ",
+        orderPlacedWithCOD:
+            "तुआढ़ा ऑर्डर कैश ऑन डिलीवरी दे नाल दर्ज होई गेआ ऐ।",
+        agrivibeDemoPaymentCompleted:
+            "तुआढ़ा AgriVibe डेमो भुगतान सफलतापूर्वक पूरा होई गेआ ऐ।",
+        orderSummary: "ऑर्डर दा सार",
+        crop: "फसल",
+        quantity: "मात्रा",
+        price: "कीमत",
+        total: "कुल",
+        paymentMethod: "भुगतान तरीका",
+        paymentStatus: "भुगतान दी स्थिति",
+        paid: "भुगतान होई गेआ",
+        paymentId: "भुगतान ID",
+        paidAt: "भुगतान दा समां",
+        demoPayment: "डेमो भुगतान",
+        noRealMoneyTransferred:
+            "कोई असली पैसा ट्रांसफर नेईं कीता गेआ।",
+        paymentSimulatedPrototype:
+            "एह भुगतान AgriVibe प्रोटोटाइप आस्तै सिमुलेट कीता गेआ ऐ।",
+        viewMyOrders: "मेरे ऑर्डर दिखाओ",
+        continueShopping: "खरीदारी जारी रक्खो",
+        secureDemoPayment: "सुरक्षित डेमो भुगतान",
+        farmer: "किसान",
+        totalAmount: "कुल रकम",
+        deliveryLocation: "डिलीवरी स्थान",
+        chooseDemoPaymentMethod:
+            "डेमो भुगतान दा तरीका चुनो।",
+        demoUPIPayment: "डेमो UPI भुगतान",
+        card: "कार्ड",
+        demoCardPayment: "डेमो कार्ड भुगतान",
+        cashOnDelivery: "कैश ऑन डिलीवरी",
+        payWhenDelivered:
+            "फसल मिलन पर भुगतान करो",
+        processing: "प्रक्रिया जारी ऐ...",
+        confirmOrder: "ऑर्डर पक्का करो",
+        payAmount: "भुगतान करो",
+        demoMode: "डेमो मोड",
+        noRealPayment:
+            "कोई असली पैसा जां वित्तीय जानकारी प्रोसेस नेईं कीती जंदी।",
+        loadingPayment: "भुगतान लोड होआ करदा ऐ...",
+        paymentError: "भुगतान च गलती",
+        backToOrders: "ऑर्डरें पर वापस जाओ",
+        onlyBuyersCanMakePayments:
+            "सिर्फ खरीदार भुगतान करी सकदे न।",
+        orderIdMissing: "ऑर्डर ID नेईं मिली।",
+        notAllowedToPay:
+            "तुआनूं इस ऑर्डर दा भुगतान करने दी इजाज़त नेईं ऐ।",
+        unableToLoadOrder: "ऑर्डर लोड नेईं होई सकेआ।",
+        unableToCreatePayment:
+            "भुगतान तैयार नेईं होई सकेआ।",
+        paymentFailed: "भुगतान असफल होई गेआ।",
+        paymentFailedTryAgain:
+            "भुगतान असफल होई गेआ। दोबारा कोशिश करो।"
+    },
+
+    // ==================================================
+    // GUJARATI
+    // ==================================================
+    gu: {
+        paymentSuccessful: "ચુકવણી સફળ થઈ!",
+        cashOnDeliverySelected: "કેશ ઑન ડિલિવરી પસંદ કરવામાં આવી",
+        orderPlacedWithCOD:
+            "તમારો ઓર્ડર કેશ ઑન ડિલિવરી સાથે નોંધાયો છે.",
+        agrivibeDemoPaymentCompleted:
+            "તમારી AgriVibe ડેમો ચુકવણી સફળતાપૂર્વક પૂર્ણ થઈ છે.",
+        orderSummary: "ઓર્ડરનો સારાંશ",
+        crop: "પાક",
+        quantity: "જથ્થો",
+        price: "કિંમત",
+        total: "કુલ",
+        paymentMethod: "ચુકવણી પદ્ધતિ",
+        paymentStatus: "ચુકવણી સ્થિતિ",
+        paid: "ચૂકવેલ",
+        paymentId: "ચુકવણી ID",
+        paidAt: "ચુકવણીનો સમય",
+        demoPayment: "ડેમો ચુકવણી",
+        noRealMoneyTransferred:
+            "કોઈ વાસ્તવિક નાણાં ટ્રાન્સફર થયા નથી.",
+        paymentSimulatedPrototype:
+            "આ ચુકવણી AgriVibe પ્રોટોટાઇપ માટે સિમ્યુલેટ કરવામાં આવી છે.",
+        viewMyOrders: "મારા ઓર્ડર જુઓ",
+        continueShopping: "ખરીદી ચાલુ રાખો",
+        secureDemoPayment: "સુરક્ષિત ડેમો ચુકવણી",
+        farmer: "ખેડૂત",
+        totalAmount: "કુલ રકમ",
+        deliveryLocation: "ડિલિવરી સ્થળ",
+        chooseDemoPaymentMethod:
+            "ડેમો ચુકવણી પદ્ધતિ પસંદ કરો.",
+        demoUPIPayment: "ડેમો UPI ચુકવણી",
+        card: "કાર્ડ",
+        demoCardPayment: "ડેમો કાર્ડ ચુકવણી",
+        cashOnDelivery: "કેશ ઑન ડિલિવરી",
+        payWhenDelivered:
+            "પાક પહોંચાડવામાં આવે ત્યારે ચૂકવણી કરો",
+        processing: "પ્રક્રિયા થઈ રહી છે...",
+        confirmOrder: "ઓર્ડર ખાતરી કરો",
+        payAmount: "ચૂકવણી કરો",
+        demoMode: "ડેમો મોડ",
+        noRealPayment:
+            "કોઈ વાસ્તવિક નાણાં અથવા નાણાકીય માહિતી પ્રક્રિયા કરવામાં આવતી નથી.",
+        loadingPayment: "ચુકવણી લોડ થઈ રહી છે...",
+        paymentError: "ચુકવણી ભૂલ",
+        backToOrders: "ઓર્ડર પર પાછા જાઓ",
+        onlyBuyersCanMakePayments:
+            "ફક્ત ખરીદદારો જ ચુકવણી કરી શકે છે.",
+        orderIdMissing: "ઓર્ડર ID મળ્યું નથી.",
+        notAllowedToPay:
+            "તમને આ ઓર્ડર માટે ચુકવણી કરવાની મંજૂરી નથી.",
+        unableToLoadOrder: "ઓર્ડર લોડ કરી શકાયો નથી.",
+        unableToCreatePayment:
+            "ચુકવણી બનાવી શકાઈ નથી.",
+        paymentFailed: "ચુકવણી નિષ્ફળ ગઈ.",
+        paymentFailedTryAgain:
+            "ચુકવણી નિષ્ફળ ગઈ. ફરી પ્રયાસ કરો."
+    },
+
+    // ==================================================
+    // HINDI
+    // ==================================================
+    hi: {
+        paymentSuccessful: "भुगतान सफल हुआ!",
+        cashOnDeliverySelected: "कैश ऑन डिलीवरी चुना गया",
+        orderPlacedWithCOD:
+            "आपका ऑर्डर कैश ऑन डिलीवरी के साथ दर्ज हो गया है।",
+        agrivibeDemoPaymentCompleted:
+            "आपका AgriVibe डेमो भुगतान सफलतापूर्वक पूरा हो गया है।",
+        orderSummary: "ऑर्डर का सारांश",
+        crop: "फसल",
+        quantity: "मात्रा",
+        price: "कीमत",
+        total: "कुल",
+        paymentMethod: "भुगतान का तरीका",
+        paymentStatus: "भुगतान की स्थिति",
+        paid: "भुगतान किया गया",
+        paymentId: "भुगतान ID",
+        paidAt: "भुगतान का समय",
+        demoPayment: "डेमो भुगतान",
+        noRealMoneyTransferred:
+            "कोई वास्तविक धन हस्तांतरित नहीं किया गया।",
+        paymentSimulatedPrototype:
+            "यह भुगतान AgriVibe प्रोटोटाइप के लिए सिमुलेट किया गया है।",
+        viewMyOrders: "मेरे ऑर्डर देखें",
+        continueShopping: "खरीदारी जारी रखें",
+        secureDemoPayment: "सुरक्षित डेमो भुगतान",
+        farmer: "किसान",
+        totalAmount: "कुल राशि",
+        deliveryLocation: "डिलीवरी स्थान",
+        chooseDemoPaymentMethod:
+            "डेमो भुगतान का तरीका चुनें।",
+        demoUPIPayment: "डेमो UPI भुगतान",
+        card: "कार्ड",
+        demoCardPayment: "डेमो कार्ड भुगतान",
+        cashOnDelivery: "कैश ऑन डिलीवरी",
+        payWhenDelivered:
+            "फसल की डिलीवरी होने पर भुगतान करें",
+        processing: "प्रक्रिया जारी है...",
+        confirmOrder: "ऑर्डर की पुष्टि करें",
+        payAmount: "भुगतान करें",
+        demoMode: "डेमो मोड",
+        noRealPayment:
+            "कोई वास्तविक धन या वित्तीय जानकारी संसाधित नहीं की जाती।",
+        loadingPayment: "भुगतान लोड हो रहा है...",
+        paymentError: "भुगतान त्रुटि",
+        backToOrders: "ऑर्डर पर वापस जाएँ",
+        onlyBuyersCanMakePayments:
+            "केवल खरीदार ही भुगतान कर सकते हैं।",
+        orderIdMissing: "ऑर्डर ID नहीं मिली।",
+        notAllowedToPay:
+            "आपको इस ऑर्डर के लिए भुगतान करने की अनुमति नहीं है।",
+        unableToLoadOrder: "ऑर्डर लोड नहीं हो सका।",
+        unableToCreatePayment:
+            "भुगतान बनाया नहीं जा सका।",
+        paymentFailed: "भुगतान विफल हुआ।",
+        paymentFailedTryAgain:
+            "भुगतान विफल हुआ। कृपया फिर से प्रयास करें।"
+    },
+
+    // ==================================================
+    // KANNADA
+    // ==================================================
+    kn: {
+        paymentSuccessful: "ಪಾವತಿ ಯಶಸ್ವಿಯಾಗಿದೆ!",
+        cashOnDeliverySelected: "ಕ್ಯಾಶ್ ಆನ್ ಡೆಲಿವರಿ ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ",
+        orderPlacedWithCOD:
+            "ನಿಮ್ಮ ಆರ್ಡರ್ ಕ್ಯಾಶ್ ಆನ್ ಡೆಲಿವರಿಯೊಂದಿಗೆ ದಾಖಲಾಗಿದೆ.",
+        agrivibeDemoPaymentCompleted:
+            "ನಿಮ್ಮ AgriVibe ಡೆಮೋ ಪಾವತಿ ಯಶಸ್ವಿಯಾಗಿ ಪೂರ್ಣಗೊಂಡಿದೆ.",
+        orderSummary: "ಆರ್ಡರ್ ಸಾರಾಂಶ",
+        crop: "ಬೆಳೆ",
+        quantity: "ಪ್ರಮಾಣ",
+        price: "ಬೆಲೆ",
+        total: "ಒಟ್ಟು",
+        paymentMethod: "ಪಾವತಿ ವಿಧಾನ",
+        paymentStatus: "ಪಾವತಿ ಸ್ಥಿತಿ",
+        paid: "ಪಾವತಿಸಲಾಗಿದೆ",
+        paymentId: "ಪಾವತಿ ID",
+        paidAt: "ಪಾವತಿ ಸಮಯ",
+        demoPayment: "ಡೆಮೋ ಪಾವತಿ",
+        noRealMoneyTransferred:
+            "ಯಾವುದೇ ನಿಜವಾದ ಹಣ ವರ್ಗಾವಣೆ ಮಾಡಲಾಗಿಲ್ಲ.",
+        paymentSimulatedPrototype:
+            "ಈ ಪಾವತಿಯನ್ನು AgriVibe ಪ್ರೋಟೋಟೈಪ್‌ಗಾಗಿ ಸಿಮ್ಯುಲೇಟ್ ಮಾಡಲಾಗಿದೆ.",
+        viewMyOrders: "ನನ್ನ ಆರ್ಡರ್‌ಗಳನ್ನು ನೋಡಿ",
+        continueShopping: "ಖರೀದಿ ಮುಂದುವರಿಸಿ",
+        secureDemoPayment: "ಸುರಕ್ಷಿತ ಡೆಮೋ ಪಾವತಿ",
+        farmer: "ರೈತ",
+        totalAmount: "ಒಟ್ಟು ಮೊತ್ತ",
+        deliveryLocation: "ವಿತರಣಾ ಸ್ಥಳ",
+        chooseDemoPaymentMethod:
+            "ಡೆಮೋ ಪಾವತಿ ವಿಧಾನವನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
+        demoUPIPayment: "ಡೆಮೋ UPI ಪಾವತಿ",
+        card: "ಕಾರ್ಡ್",
+        demoCardPayment: "ಡೆಮೋ ಕಾರ್ಡ್ ಪಾವತಿ",
+        cashOnDelivery: "ಕ್ಯಾಶ್ ಆನ್ ಡೆಲಿವರಿ",
+        payWhenDelivered:
+            "ಬೆಳೆ ವಿತರಿಸಿದಾಗ ಪಾವತಿಸಿ",
+        processing: "ಪ್ರಕ್ರಿಯೆ ನಡೆಯುತ್ತಿದೆ...",
+        confirmOrder: "ಆರ್ಡರ್ ದೃಢೀಕರಿಸಿ",
+        payAmount: "ಪಾವತಿಸಿ",
+        demoMode: "ಡೆಮೋ ಮೋಡ್",
+        noRealPayment:
+            "ಯಾವುದೇ ನಿಜವಾದ ಹಣ ಅಥವಾ ಹಣಕಾಸಿನ ಮಾಹಿತಿಯನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ.",
+        loadingPayment: "ಪಾವತಿ ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+        paymentError: "ಪಾವತಿ ದೋಷ",
+        backToOrders: "ಆರ್ಡರ್‌ಗಳಿಗೆ ಹಿಂತಿರುಗಿ",
+        onlyBuyersCanMakePayments:
+            "ಖರೀದಿದಾರರು ಮಾತ್ರ ಪಾವತಿ ಮಾಡಬಹುದು.",
+        orderIdMissing: "ಆರ್ಡರ್ ID ಕಾಣೆಯಾಗಿವೆ.",
+        notAllowedToPay:
+            "ಈ ಆರ್ಡರ್‌ಗೆ ಪಾವತಿ ಮಾಡಲು ನಿಮಗೆ ಅನುಮತಿ ಇಲ್ಲ.",
+        unableToLoadOrder: "ಆರ್ಡರ್ ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.",
+        unableToCreatePayment:
+            "ಪಾವತಿ ರಚಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.",
+        paymentFailed: "ಪಾವತಿ ವಿಫಲವಾಗಿದೆ.",
+        paymentFailedTryAgain:
+            "ಪಾವತಿ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
+    },
+
+    // ==================================================
+    // KASHMIRI
+    // ==================================================
+    ks: {
+        paymentSuccessful: "ادائیگی کامیاب!",
+        cashOnDeliverySelected: "کیش آن ڈیلیوری منتخب کرنہ آو",
+        orderPlacedWithCOD:
+            "تُہند آرڈر کیش آن ڈیلیوری سیتھ درج گژھ۔",
+        agrivibeDemoPaymentCompleted:
+            "تُہند AgriVibe ڈیمو ادائیگی کامیابی سیتھ مکمل گژھ۔",
+        orderSummary: "آرڈرُک خلاصہ",
+        crop: "فصل",
+        quantity: "مقدار",
+        price: "قیمت",
+        total: "کل",
+        paymentMethod: "ادائیگی طریقہ",
+        paymentStatus: "ادائیگی حالت",
+        paid: "ادائیگی گژھ",
+        paymentId: "ادائیگی ID",
+        paidAt: "ادائیگی وقت",
+        demoPayment: "ڈیمو ادائیگی",
+        noRealMoneyTransferred:
+            "کُنہ حقیقی پیسہ منتقل نہ گژھ۔",
+        paymentSimulatedPrototype:
+            "یہ ادائیگی AgriVibe پروٹوٹائپ خاطرہ سمیولیٹ کرنہ آو۔",
+        viewMyOrders: "میون آرڈر دِژھو",
+        continueShopping: "خریداری جاری رَکھو",
+        secureDemoPayment: "محفوظ ڈیمو ادائیگی",
+        farmer: "کسان",
+        totalAmount: "کل رقم",
+        deliveryLocation: "ڈیلیوری مقام",
+        chooseDemoPaymentMethod:
+            "ڈیمو ادائیگی طریقہ منتخب کریو۔",
+        demoUPIPayment: "ڈیمو UPI ادائیگی",
+        card: "کارڈ",
+        demoCardPayment: "ڈیمو کارڈ ادائیگی",
+        cashOnDelivery: "کیش آن ڈیلیوری",
+        payWhenDelivered:
+            "فصل پہنچاونہ وقت ادائیگی کریو",
+        processing: "پروسیسنگ جاری...",
+        confirmOrder: "آرڈر تصدیق کریو",
+        payAmount: "ادائیگی کریو",
+        demoMode: "ڈیمو موڈ",
+        noRealPayment:
+            "کُنہ حقیقی پیسہ یا مالی معلومات پروسیس نہ کرنہ یوان۔",
+        loadingPayment: "ادائیگی لوڈ گژھان...",
+        paymentError: "ادائیگی خرابی",
+        backToOrders: "آرڈرن منز واپس گژھو",
+        onlyBuyersCanMakePayments:
+            "صرف خریدار ادائیگی کرتھ ہیکن۔",
+        orderIdMissing: "آرڈر ID دستیاب چھ نہ۔",
+        notAllowedToPay:
+            "تُہند اجازت چھ نہ یِم آرڈر خاطرہ ادائیگی کرنہ۔",
+        unableToLoadOrder: "آرڈر لوڈ کرنہ نہ گژھ۔",
+        unableToCreatePayment:
+            "ادائیگی بناؤنہ نہ گژھ۔",
+        paymentFailed: "ادائیگی ناکام گژھ۔",
+        paymentFailedTryAgain:
+            "ادائیگی ناکام گژھ۔ مہربانی کرتھ دوبارہ کوشش کریو۔"
+    },
+
+    // ==================================================
+    // KONKANI
+    // ==================================================
+    kok: {
+        paymentSuccessful: "फारीक जालें!",
+        cashOnDeliverySelected: "कॅश ऑन डिलिव्हरी निवडला",
+        orderPlacedWithCOD:
+            "तुमचो ऑर्डर कॅश ऑन डिलिव्हरी वांगडा नोंद जाला.",
+        agrivibeDemoPaymentCompleted:
+            "तुमचो AgriVibe डेमो फारीक येसस्वीपणान पुराय जाला.",
+        orderSummary: "ऑर्डर सारांश",
+        crop: "पीक",
+        quantity: "प्रमाण",
+        price: "दर",
+        total: "एकूण",
+        paymentMethod: "फारीक पद्धत",
+        paymentStatus: "फारीक स्थिती",
+        paid: "फारीक जाला",
+        paymentId: "फारीक ID",
+        paidAt: "फारीक वेळ",
+        demoPayment: "डेमो फारीक",
+        noRealMoneyTransferred:
+            "खरें पैशे हस्तांतरीत जाले नात.",
+        paymentSimulatedPrototype:
+            "हो फारीक AgriVibe प्रोटोटायपाखातीर सिम्युलेट केला.",
+        viewMyOrders: "म्हजे ऑर्डर पळोव",
+        continueShopping: "खरेदी चालू दवरात",
+        secureDemoPayment: "सुरक्षित डेमो फारीक",
+        farmer: "शेतकार",
+        totalAmount: "एकूण रक्कम",
+        deliveryLocation: "डिलिव्हरी थळ",
+        chooseDemoPaymentMethod:
+            "डेमो फारीक पद्धत निवडात.",
+        demoUPIPayment: "डेमो UPI फारीक",
+        card: "कार्ड",
+        demoCardPayment: "डेमो कार्ड फारीक",
+        cashOnDelivery: "कॅश ऑन डिलिव्हरी",
+        payWhenDelivered:
+            "पीक डिलिव्हर जाल्यार फारीक करात",
+        processing: "प्रक्रिया चलता...",
+        confirmOrder: "ऑर्डर निश्चित करात",
+        payAmount: "फारीक करात",
+        demoMode: "डेमो मोड",
+        noRealPayment:
+            "खरें पैशे वा आर्थिक म्हायती प्रक्रिया करात ना.",
+        loadingPayment: "फारीक लोड जाता...",
+        paymentError: "फारीक चूक",
+        backToOrders: "ऑर्डरांक परत वचात",
+        onlyBuyersCanMakePayments:
+            "फकत खरेदीदार फारीक करू शकतात.",
+        orderIdMissing: "ऑर्डर ID मेळना.",
+        notAllowedToPay:
+            "ह्या ऑर्डर खातीर फारीक करपाची तुमका परवानगी ना.",
+        unableToLoadOrder: "ऑर्डर लोड जावंक ना.",
+        unableToCreatePayment:
+            "फारीक तयार जावंक ना.",
+        paymentFailed: "फारीक फेल जाला.",
+        paymentFailedTryAgain:
+            "फारीक फेल जाला. परत प्रयत्न करात."
+    },
+
+    // ==================================================
+    // MAITHILI
+    // ==================================================
+    mai: {
+        paymentSuccessful: "भुगतान सफल भेल!",
+        cashOnDeliverySelected: "कैश ऑन डिलीवरी चुनल गेल",
+        orderPlacedWithCOD:
+            "अहाँक ऑर्डर कैश ऑन डिलीवरीक संग दर्ज भ' गेल अछि।",
+        agrivibeDemoPaymentCompleted:
+            "अहाँक AgriVibe डेमो भुगतान सफलतापूर्वक पूरा भ' गेल अछि।",
+        orderSummary: "ऑर्डरक सारांश",
+        crop: "फसल",
+        quantity: "मात्रा",
+        price: "दाम",
+        total: "कुल",
+        paymentMethod: "भुगतानक तरीका",
+        paymentStatus: "भुगतानक स्थिति",
+        paid: "भुगतान भेल",
+        paymentId: "भुगतान ID",
+        paidAt: "भुगतानक समय",
+        demoPayment: "डेमो भुगतान",
+        noRealMoneyTransferred:
+            "कोनो वास्तविक पैसा स्थानांतरित नहि भेल।",
+        paymentSimulatedPrototype:
+            "ई भुगतान AgriVibe प्रोटोटाइप लेल सिमुलेट कएल गेल अछि।",
+        viewMyOrders: "हमर ऑर्डर देखू",
+        continueShopping: "खरीदारी जारी राखू",
+        secureDemoPayment: "सुरक्षित डेमो भुगतान",
+        farmer: "किसान",
+        totalAmount: "कुल राशि",
+        deliveryLocation: "डिलीवरी स्थान",
+        chooseDemoPaymentMethod:
+            "डेमो भुगतानक तरीका चुनू।",
+        demoUPIPayment: "डेमो UPI भुगतान",
+        card: "कार्ड",
+        demoCardPayment: "डेमो कार्ड भुगतान",
+        cashOnDelivery: "कैश ऑन डिलीवरी",
+        payWhenDelivered:
+            "फसल डिलीवरी भेलाक बाद भुगतान करू",
+        processing: "प्रक्रिया चलि रहल अछि...",
+        confirmOrder: "ऑर्डर निश्चित करू",
+        payAmount: "भुगतान करू",
+        demoMode: "डेमो मोड",
+        noRealPayment:
+            "कोनो वास्तविक पैसा वा वित्तीय जानकारी प्रोसेस नहि कएल जाइत अछि।",
+        loadingPayment: "भुगतान लोड भ' रहल अछि...",
+        paymentError: "भुगतान त्रुटि",
+        backToOrders: "ऑर्डर पर वापस जाउ",
+        onlyBuyersCanMakePayments:
+            "केवल खरीदार भुगतान क' सकैत छथि।",
+        orderIdMissing: "ऑर्डर ID नहि भेटल।",
+        notAllowedToPay:
+            "अहाँकेँ एहि ऑर्डर लेल भुगतान करबाक अनुमति नहि अछि।",
+        unableToLoadOrder: "ऑर्डर लोड नहि भ' सकल।",
+        unableToCreatePayment:
+            "भुगतान नहि बना सकल।",
+        paymentFailed: "भुगतान असफल भेल।",
+        paymentFailedTryAgain:
+            "भुगतान असफल भेल। कृपया फेर प्रयास करू।"
+    },
+
+    // ==================================================
+    // MALAYALAM
+    // ==================================================
+    ml: {
+        paymentSuccessful: "പണമടയ്ക്കൽ വിജയകരമായി!",
+        cashOnDeliverySelected: "ക്യാഷ് ഓൺ ഡെലിവറി തിരഞ്ഞെടുത്തു",
+        orderPlacedWithCOD:
+            "നിങ്ങളുടെ ഓർഡർ ക്യാഷ് ഓൺ ഡെലിവറിയോടെ രജിസ്റ്റർ ചെയ്തു.",
+        agrivibeDemoPaymentCompleted:
+            "നിങ്ങളുടെ AgriVibe ഡെമോ പേയ്മെന്റ് വിജയകരമായി പൂർത്തിയായി.",
+        orderSummary: "ഓർഡർ സംഗ്രഹം",
+        crop: "വിള",
+        quantity: "അളവ്",
+        price: "വില",
+        total: "ആകെ",
+        paymentMethod: "പണമടയ്ക്കൽ രീതി",
+        paymentStatus: "പണമടയ്ക്കൽ നില",
+        paid: "പണമടച്ചു",
+        paymentId: "പേയ്മെന്റ് ID",
+        paidAt: "പണമടച്ച സമയം",
+        demoPayment: "ഡെമോ പേയ്മെന്റ്",
+        noRealMoneyTransferred:
+            "യഥാർത്ഥ പണം കൈമാറ്റം ചെയ്തിട്ടില്ല.",
+        paymentSimulatedPrototype:
+            "ഈ പേയ്മെന്റ് AgriVibe പ്രോട്ടോടൈപ്പിനായി സിമുലേറ്റ് ചെയ്തതാണ്.",
+        viewMyOrders: "എന്റെ ഓർഡറുകൾ കാണുക",
+        continueShopping: "ഷോപ്പിംഗ് തുടരുക",
+        secureDemoPayment: "സുരക്ഷിത ഡെമോ പേയ്മെന്റ്",
+        farmer: "കർഷകൻ",
+        totalAmount: "ആകെ തുക",
+        deliveryLocation: "ഡെലിവറി സ്ഥലം",
+        chooseDemoPaymentMethod:
+            "ഒരു ഡെമോ പേയ്മെന്റ് രീതി തിരഞ്ഞെടുക്കുക.",
+        demoUPIPayment: "ഡെമോ UPI പേയ്മെന്റ്",
+        card: "കാർഡ്",
+        demoCardPayment: "ഡെമോ കാർഡ് പേയ്മെന്റ്",
+        cashOnDelivery: "ക്യാഷ് ഓൺ ഡെലിവറി",
+        payWhenDelivered:
+            "വിള ലഭിക്കുമ്പോൾ പണമടയ്ക്കുക",
+        processing: "പ്രോസസ്സ് ചെയ്യുന്നു...",
+        confirmOrder: "ഓർഡർ സ്ഥിരീകരിക്കുക",
+        payAmount: "പണമടയ്ക്കുക",
+        demoMode: "ഡെമോ മോഡ്",
+        noRealPayment:
+            "യഥാർത്ഥ പണമോ സാമ്പത്തിക വിവരങ്ങളോ പ്രോസസ്സ് ചെയ്യുന്നില്ല.",
+        loadingPayment: "പേയ്മെന്റ് ലോഡ് ചെയ്യുന്നു...",
+        paymentError: "പേയ്മെന്റ് പിശക്",
+        backToOrders: "ഓർഡറുകളിലേക്ക് മടങ്ങുക",
+        onlyBuyersCanMakePayments:
+            "വാങ്ങുന്നവർക്ക് മാത്രമേ പണമടയ്ക്കാൻ കഴിയൂ.",
+        orderIdMissing: "ഓർഡർ ID ലഭ്യമല്ല.",
+        notAllowedToPay:
+            "ഈ ഓർഡറിനായി പണമടയ്ക്കാൻ നിങ്ങൾക്ക് അനുമതിയില്ല.",
+        unableToLoadOrder: "ഓർഡർ ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല.",
+        unableToCreatePayment:
+            "പേയ്മെന്റ് സൃഷ്ടിക്കാൻ കഴിഞ്ഞില്ല.",
+        paymentFailed: "പേയ്മെന്റ് പരാജയപ്പെട്ടു.",
+        paymentFailedTryAgain:
+            "പേയ്മെന്റ് പരാജയപ്പെട്ടു. വീണ്ടും ശ്രമിക്കുക."
+    },
+
+    // ==================================================
+    // MANIPURI
+    // ==================================================
+    mni: {
+        paymentSuccessful: "পেমেন্ট সফল ওইরে!",
+        cashOnDeliverySelected: "ক্যাশ অন ডেলিভারি খনবা ওইরে",
+        orderPlacedWithCOD:
+            "নহাক্কী অর্ডর ক্যাশ অন ডেলিভারীগা লোইননা থোক্লে।",
+        agrivibeDemoPaymentCompleted:
+            "নহাক্কী AgriVibe ডেমো পেমেন্ট সফলভাবে লোইশিনরে।",
+        orderSummary: "অর্ডর সারাংশ",
+        crop: "ফসল",
+        quantity: "পরিমাণ",
+        price: "মশিং",
+        total: "পুং",
+        paymentMethod: "পেমেন্ট মওং",
+        paymentStatus: "পেমেন্ট অৱস্থা",
+        paid: "শুল্ক শিনরে",
+        paymentId: "পেমেন্ট ID",
+        paidAt: "পেমেন্ট সময়",
+        demoPayment: "ডেমো পেমেন্ট",
+        noRealMoneyTransferred:
+            "অশেংবা মমল কোনো ট্রান্সফর তৌদ্রে।",
+        paymentSimulatedPrototype:
+            "মসি AgriVibe প্রোটোটাইপকী পেমেন্ট সিমুলেট তৌরে।",
+        viewMyOrders: "ঐগী অর্ডরশিং উবা",
+        continueShopping: "খরিদারি মখা চত্থবা",
+        secureDemoPayment: "সেফ ডেমো পেমেন্ট",
+        farmer: "হাইবা",
+        totalAmount: "পুং মশিং",
+        deliveryLocation: "ডেলিভরি মফম",
+        chooseDemoPaymentMethod:
+            "ডেমো পেমেন্ট মওং অমা খনবিয়ু।",
+        demoUPIPayment: "ডেমো UPI পেমেন্ট",
+        card: "কার্ড",
+        demoCardPayment: "ডেমো কার্ড পেমেন্ট",
+        cashOnDelivery: "ক্যাশ অন ডেলিভারি",
+        payWhenDelivered:
+            "ফসল ডেলিভরি তৌবা মতমদা পেমেন্ট তৌবিয়ু",
+        processing: "থৌরম থোকপা লৈরে...",
+        confirmOrder: "অর্ডর কনফার্ম তৌবিয়ু",
+        payAmount: "পেমেন্ট তৌবিয়ু",
+        demoMode: "ডেমো মোড",
+        noRealPayment:
+            "অশেংবা মমল নত্ত্রগা ফাইনান্সিয়েল ইনফরমেশন প্রসেস তৌদে।",
+        loadingPayment: "পেমেন্ট লোড তৌরে...",
+        paymentError: "পেমেন্ট ভুল",
+        backToOrders: "অর্ডরদা হন্না চৎপা",
+        onlyBuyersCanMakePayments:
+            "খরিদারশিংনসু পেমেন্ট তৌবা য়াগনি।",
+        orderIdMissing: "অর্ডর ID ফংদ্রে।",
+        notAllowedToPay:
+            "মসি অর্ডরকী পেমেন্ট তৌবা অনুমতি নত্তে।",
+        unableToLoadOrder: "অর্ডর লোড তৌবা য়াদ্রে।",
+        unableToCreatePayment:
+            "পেমেন্ট শেম্বা য়াদ্রে।",
+        paymentFailed: "পেমেন্ট ফেইল ওইরে।",
+        paymentFailedTryAgain:
+            "পেমেন্ট ফেইল ওইরে। হন্না চেষ্টা তৌবিয়ু।"
+    },
+
+    // ==================================================
+    // MARATHI
+    // ==================================================
+    mr: {
+        paymentSuccessful: "पेमेंट यशस्वी झाले!",
+        cashOnDeliverySelected: "कॅश ऑन डिलिव्हरी निवडले",
+        orderPlacedWithCOD:
+            "तुमची ऑर्डर कॅश ऑन डिलिव्हरीसह नोंदवली गेली आहे.",
+        agrivibeDemoPaymentCompleted:
+            "तुमचे AgriVibe डेमो पेमेंट यशस्वीपणे पूर्ण झाले आहे.",
+        orderSummary: "ऑर्डरचा सारांश",
+        crop: "पीक",
+        quantity: "प्रमाण",
+        price: "किंमत",
+        total: "एकूण",
+        paymentMethod: "पेमेंट पद्धत",
+        paymentStatus: "पेमेंट स्थिती",
+        paid: "पेमेंट झाले",
+        paymentId: "पेमेंट ID",
+        paidAt: "पेमेंटची वेळ",
+        demoPayment: "डेमो पेमेंट",
+        noRealMoneyTransferred:
+            "कोणतेही वास्तविक पैसे हस्तांतरित केले गेले नाहीत.",
+        paymentSimulatedPrototype:
+            "हे पेमेंट AgriVibe प्रोटोटाइपसाठी सिम्युलेट केले आहे.",
+        viewMyOrders: "माझ्या ऑर्डर पहा",
+        continueShopping: "खरेदी सुरू ठेवा",
+        secureDemoPayment: "सुरक्षित डेमो पेमेंट",
+        farmer: "शेतकरी",
+        totalAmount: "एकूण रक्कम",
+        deliveryLocation: "डिलिव्हरी ठिकाण",
+        chooseDemoPaymentMethod:
+            "डेमो पेमेंट पद्धत निवडा.",
+        demoUPIPayment: "डेमो UPI पेमेंट",
+        card: "कार्ड",
+        demoCardPayment: "डेमो कार्ड पेमेंट",
+        cashOnDelivery: "कॅश ऑन डिलिव्हरी",
+        payWhenDelivered:
+            "पीक पोहोचवल्यावर पेमेंट करा",
+        processing: "प्रक्रिया सुरू आहे...",
+        confirmOrder: "ऑर्डर निश्चित करा",
+        payAmount: "पेमेंट करा",
+        demoMode: "डेमो मोड",
+        noRealPayment:
+            "कोणतेही वास्तविक पैसे किंवा आर्थिक माहिती प्रक्रिया केली जात नाही.",
+        loadingPayment: "पेमेंट लोड होत आहे...",
+        paymentError: "पेमेंट त्रुटी",
+        backToOrders: "ऑर्डरकडे परत जा",
+        onlyBuyersCanMakePayments:
+            "फक्त खरेदीदार पेमेंट करू शकतात.",
+        orderIdMissing: "ऑर्डर ID उपलब्ध नाही.",
+        notAllowedToPay:
+            "तुम्हाला या ऑर्डरसाठी पेमेंट करण्याची परवानगी नाही.",
+        unableToLoadOrder: "ऑर्डर लोड करता आली नाही.",
+        unableToCreatePayment:
+            "पेमेंट तयार करता आले नाही.",
+        paymentFailed: "पेमेंट अयशस्वी झाले.",
+        paymentFailedTryAgain:
+            "पेमेंट अयशस्वी झाले. पुन्हा प्रयत्न करा."
+    },
+
+    // ==================================================
+    // NEPALI
+    // ==================================================
+    ne: {
+        paymentSuccessful: "भुक्तानी सफल भयो!",
+        cashOnDeliverySelected: "क्यास अन डेलिभरी चयन गरियो",
+        orderPlacedWithCOD:
+            "तपाईंको अर्डर क्यास अन डेलिभरीसँग दर्ता गरिएको छ।",
+        agrivibeDemoPaymentCompleted:
+            "तपाईंको AgriVibe डेमो भुक्तानी सफलतापूर्वक पूरा भयो।",
+        orderSummary: "अर्डरको सारांश",
+        crop: "बाली",
+        quantity: "परिमाण",
+        price: "मूल्य",
+        total: "जम्मा",
+        paymentMethod: "भुक्तानी विधि",
+        paymentStatus: "भुक्तानी स्थिति",
+        paid: "भुक्तानी भयो",
+        paymentId: "भुक्तानी ID",
+        paidAt: "भुक्तानी समय",
+        demoPayment: "डेमो भुक्तानी",
+        noRealMoneyTransferred:
+            "कुनै वास्तविक पैसा स्थानान्तरण गरिएको छैन।",
+        paymentSimulatedPrototype:
+            "यो भुक्तानी AgriVibe प्रोटोटाइपका लागि सिमुलेट गरिएको हो।",
+        viewMyOrders: "मेरा अर्डर हेर्नुहोस्",
+        continueShopping: "किनमेल जारी राख्नुहोस्",
+        secureDemoPayment: "सुरक्षित डेमो भुक्तानी",
+        farmer: "किसान",
+        totalAmount: "कुल रकम",
+        deliveryLocation: "डेलिभरी स्थान",
+        chooseDemoPaymentMethod:
+            "डेमो भुक्तानी विधि छान्नुहोस्।",
+        demoUPIPayment: "डेमो UPI भुक्तानी",
+        card: "कार्ड",
+        demoCardPayment: "डेमो कार्ड भुक्तानी",
+        cashOnDelivery: "क्यास अन डेलिभरी",
+        payWhenDelivered:
+            "बाली डेलिभर भएपछि भुक्तानी गर्नुहोस्",
+        processing: "प्रक्रिया हुँदैछ...",
+        confirmOrder: "अर्डर पुष्टि गर्नुहोस्",
+        payAmount: "भुक्तानी गर्नुहोस्",
+        demoMode: "डेमो मोड",
+        noRealPayment:
+            "कुनै वास्तविक पैसा वा वित्तीय जानकारी प्रशोधन गरिँदैन।",
+        loadingPayment: "भुक्तानी लोड हुँदैछ...",
+        paymentError: "भुक्तानी त्रुटि",
+        backToOrders: "अर्डरमा फर्कनुहोस्",
+        onlyBuyersCanMakePayments:
+            "खरिदकर्ताले मात्र भुक्तानी गर्न सक्छन्।",
+        orderIdMissing: "अर्डर ID उपलब्ध छैन।",
+        notAllowedToPay:
+            "तपाईंलाई यस अर्डरको भुक्तानी गर्ने अनुमति छैन।",
+        unableToLoadOrder: "अर्डर लोड गर्न सकिएन।",
+        unableToCreatePayment:
+            "भुक्तानी सिर्जना गर्न सकिएन।",
+        paymentFailed: "भुक्तानी असफल भयो।",
+        paymentFailedTryAgain:
+            "भुक्तानी असफल भयो। कृपया फेरि प्रयास गर्नुहोस्।"
+    },
+
+    // ==================================================
+    // ODIA
+    // ==================================================
+    or: {
+        paymentSuccessful: "ପେମେଣ୍ଟ ସଫଳ ହେଲା!",
+        cashOnDeliverySelected: "କ୍ୟାଶ ଅନ ଡେଲିଭରୀ ଚୟନ କରାଗଲା",
+        orderPlacedWithCOD:
+            "ଆପଣଙ୍କ ଅର୍ଡର କ୍ୟାଶ ଅନ ଡେଲିଭରୀ ସହିତ ଦିଆଯାଇଛି।",
+        agrivibeDemoPaymentCompleted:
+            "ଆପଣଙ୍କ AgriVibe ଡେମୋ ପେମେଣ୍ଟ ସଫଳତାର ସହିତ ସମାପ୍ତ ହୋଇଛି।",
+        orderSummary: "ଅର୍ଡର ସାରାଂଶ",
+        crop: "ଫସଲ",
+        quantity: "ପରିମାଣ",
+        price: "ମୂଲ୍ୟ",
+        total: "ମୋଟ",
+        paymentMethod: "ପେମେଣ୍ଟ ପଦ୍ଧତି",
+        paymentStatus: "ପେମେଣ୍ଟ ସ୍ଥିତି",
+        paid: "ପେମେଣ୍ଟ ହୋଇଛି",
+        paymentId: "ପେମେଣ୍ଟ ID",
+        paidAt: "ପେମେଣ୍ଟ ସମୟ",
+        demoPayment: "ଡେମୋ ପେମେଣ୍ଟ",
+        noRealMoneyTransferred:
+            "କୌଣସି ପ୍ରକୃତ ଟଙ୍କା ସ୍ଥାନାନ୍ତର ହୋଇନାହିଁ।",
+        paymentSimulatedPrototype:
+            "ଏହି ପେମେଣ୍ଟ AgriVibe ପ୍ରୋଟୋଟାଇପ ପାଇଁ ସିମୁଲେଟ କରାଯାଇଛି।",
+        viewMyOrders: "ମୋ ଅର୍ଡର ଦେଖନ୍ତୁ",
+        continueShopping: "କିଣାକାଟା ଜାରି ରଖନ୍ତୁ",
+        secureDemoPayment: "ସୁରକ୍ଷିତ ଡେମୋ ପେମେଣ୍ଟ",
+        farmer: "ଚାଷୀ",
+        totalAmount: "ମୋଟ ରାଶି",
+        deliveryLocation: "ଡେଲିଭରୀ ସ୍ଥାନ",
+        chooseDemoPaymentMethod:
+            "ଏକ ଡେମୋ ପେମେଣ୍ଟ ପଦ୍ଧତି ବାଛନ୍ତୁ।",
+        demoUPIPayment: "ଡେମୋ UPI ପେମେଣ୍ଟ",
+        card: "କାର୍ଡ",
+        demoCardPayment: "ଡେମୋ କାର୍ଡ ପେମେଣ୍ଟ",
+        cashOnDelivery: "କ୍ୟାଶ ଅନ ଡେଲିଭରୀ",
+        payWhenDelivered:
+            "ଫସଲ ଡେଲିଭରୀ ହେବା ସମୟରେ ପେମେଣ୍ଟ କରନ୍ତୁ",
+        processing: "ପ୍ରକ୍ରିୟା ଚାଲିଛି...",
+        confirmOrder: "ଅର୍ଡର ନିଶ୍ଚିତ କରନ୍ତୁ",
+        payAmount: "ପେମେଣ୍ଟ କରନ୍ତୁ",
+        demoMode: "ଡେମୋ ମୋଡ୍",
+        noRealPayment:
+            "କୌଣସି ପ୍ରକୃତ ଟଙ୍କା କିମ୍ବା ଆର୍ଥିକ ସୂଚନା ପ୍ରକ୍ରିୟା କରାଯାଉନାହିଁ।",
+        loadingPayment: "ପେମେଣ୍ଟ ଲୋଡ୍ ହେଉଛି...",
+        paymentError: "ପେମେଣ୍ଟ ତ୍ରୁଟି",
+        backToOrders: "ଅର୍ଡରକୁ ଫେରନ୍ତୁ",
+        onlyBuyersCanMakePayments:
+            "କେବଳ କ୍ରେତାମାନେ ପେମେଣ୍ଟ କରିପାରିବେ।",
+        orderIdMissing: "ଅର୍ଡର ID ମିଳିଲା ନାହିଁ।",
+        notAllowedToPay:
+            "ଏହି ଅର୍ଡର ପାଇଁ ପେମେଣ୍ଟ କରିବାକୁ ଆପଣଙ୍କୁ ଅନୁମତି ନାହିଁ।",
+        unableToLoadOrder: "ଅର୍ଡର ଲୋଡ୍ ହୋଇପାରିଲା ନାହିଁ।",
+        unableToCreatePayment:
+            "ପେମେଣ୍ଟ ତିଆରି ହୋଇପାରିଲା ନାହିଁ।",
+        paymentFailed: "ପେମେଣ୍ଟ ବିଫଳ ହେଲା।",
+        paymentFailedTryAgain:
+            "ପେମେଣ୍ଟ ବିଫଳ ହେଲା। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।"
+    },
+
+    // ==================================================
+    // PUNJABI
+    // ==================================================
+    pa: {
+        paymentSuccessful: "ਭੁਗਤਾਨ ਸਫਲ ਹੋਇਆ!",
+        cashOnDeliverySelected: "ਕੈਸ਼ ਆਨ ਡਿਲਿਵਰੀ ਚੁਣੀ ਗਈ",
+        orderPlacedWithCOD:
+            "ਤੁਹਾਡਾ ਆਰਡਰ ਕੈਸ਼ ਆਨ ਡਿਲਿਵਰੀ ਨਾਲ ਦਰਜ ਹੋ ਗਿਆ ਹੈ।",
+        agrivibeDemoPaymentCompleted:
+            "ਤੁਹਾਡਾ AgriVibe ਡੈਮੋ ਭੁਗਤਾਨ ਸਫਲਤਾਪੂਰਵਕ ਪੂਰਾ ਹੋ ਗਿਆ ਹੈ।",
+        orderSummary: "ਆਰਡਰ ਦਾ ਸਾਰ",
+        crop: "ਫਸਲ",
+        quantity: "ਮਾਤਰਾ",
+        price: "ਕੀਮਤ",
+        total: "ਕੁੱਲ",
+        paymentMethod: "ਭੁਗਤਾਨ ਵਿਧੀ",
+        paymentStatus: "ਭੁਗਤਾਨ ਦੀ ਸਥਿਤੀ",
+        paid: "ਭੁਗਤਾਨ ਹੋ ਗਿਆ",
+        paymentId: "ਭੁਗਤਾਨ ID",
+        paidAt: "ਭੁਗਤਾਨ ਦਾ ਸਮਾਂ",
+        demoPayment: "ਡੈਮੋ ਭੁਗਤਾਨ",
+        noRealMoneyTransferred:
+            "ਕੋਈ ਅਸਲੀ ਪੈਸਾ ਟ੍ਰਾਂਸਫਰ ਨਹੀਂ ਕੀਤਾ ਗਿਆ।",
+        paymentSimulatedPrototype:
+            "ਇਹ ਭੁਗਤਾਨ AgriVibe ਪ੍ਰੋਟੋਟਾਈਪ ਲਈ ਸਿਮੂਲੇਟ ਕੀਤਾ ਗਿਆ ਹੈ।",
+        viewMyOrders: "ਮੇਰੇ ਆਰਡਰ ਵੇਖੋ",
+        continueShopping: "ਖਰੀਦਦਾਰੀ ਜਾਰੀ ਰੱਖੋ",
+        secureDemoPayment: "ਸੁਰੱਖਿਅਤ ਡੈਮੋ ਭੁਗਤਾਨ",
+        farmer: "ਕਿਸਾਨ",
+        totalAmount: "ਕੁੱਲ ਰਕਮ",
+        deliveryLocation: "ਡਿਲਿਵਰੀ ਸਥਾਨ",
+        chooseDemoPaymentMethod:
+            "ਡੈਮੋ ਭੁਗਤਾਨ ਵਿਧੀ ਚੁਣੋ।",
+        demoUPIPayment: "ਡੈਮੋ UPI ਭੁਗਤਾਨ",
+        card: "ਕਾਰਡ",
+        demoCardPayment: "ਡੈਮੋ ਕਾਰਡ ਭੁਗਤਾਨ",
+        cashOnDelivery: "ਕੈਸ਼ ਆਨ ਡਿਲਿਵਰੀ",
+        payWhenDelivered:
+            "ਫਸਲ ਡਿਲਿਵਰ ਹੋਣ 'ਤੇ ਭੁਗਤਾਨ ਕਰੋ",
+        processing: "ਪ੍ਰਕਿਰਿਆ ਜਾਰੀ ਹੈ...",
+        confirmOrder: "ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+        payAmount: "ਭੁਗਤਾਨ ਕਰੋ",
+        demoMode: "ਡੈਮੋ ਮੋਡ",
+        noRealPayment:
+            "ਕੋਈ ਅਸਲੀ ਪੈਸਾ ਜਾਂ ਵਿੱਤੀ ਜਾਣਕਾਰੀ ਪ੍ਰਕਿਰਿਆ ਨਹੀਂ ਕੀਤੀ ਜਾਂਦੀ।",
+        loadingPayment: "ਭੁਗਤਾਨ ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+        paymentError: "ਭੁਗਤਾਨ ਗਲਤੀ",
+        backToOrders: "ਆਰਡਰਾਂ 'ਤੇ ਵਾਪਸ ਜਾਓ",
+        onlyBuyersCanMakePayments:
+            "ਸਿਰਫ਼ ਖਰੀਦਦਾਰ ਹੀ ਭੁਗਤਾਨ ਕਰ ਸਕਦੇ ਹਨ।",
+        orderIdMissing: "ਆਰਡਰ ID ਨਹੀਂ ਮਿਲੀ।",
+        notAllowedToPay:
+            "ਤੁਹਾਨੂੰ ਇਸ ਆਰਡਰ ਲਈ ਭੁਗਤਾਨ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+        unableToLoadOrder: "ਆਰਡਰ ਲੋਡ ਨਹੀਂ ਹੋ ਸਕਿਆ।",
+        unableToCreatePayment:
+            "ਭੁਗਤਾਨ ਨਹੀਂ ਬਣਾਇਆ ਜਾ ਸਕਿਆ।",
+        paymentFailed: "ਭੁਗਤਾਨ ਅਸਫਲ ਹੋਇਆ।",
+        paymentFailedTryAgain:
+            "ਭੁਗਤਾਨ ਅਸਫਲ ਹੋਇਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+    },
+
+    // ==================================================
+    // SANSKRIT
+    // ==================================================
+    sa: {
+        paymentSuccessful: "भुगतानं सफलम् अभवत्!",
+        cashOnDeliverySelected:
+            "वस्तुप्राप्त्यनन्तरं भुगतानं चयनितम्",
+        orderPlacedWithCOD:
+            "भवतः आदेशः वस्तुप्राप्त्यनन्तरं भुगतानेन सह स्थापितः।",
+        agrivibeDemoPaymentCompleted:
+            "भवतः AgriVibe नमूना-भुगतानं सफलतया सम्पन्नम्।",
+        orderSummary: "आदेशस्य सारांशः",
+        crop: "सस्यं",
+        quantity: "परिमाणम्",
+        price: "मूल्यम्",
+        total: "सम्पूर्णम्",
+        paymentMethod: "भुगतानविधिः",
+        paymentStatus: "भुगतानस्थितिः",
+        paid: "भुक्तम्",
+        paymentId: "भुगतान-सङ्केतः",
+        paidAt: "भुगतानसमयः",
+        demoPayment: "नमूना-भुगतानम्",
+        noRealMoneyTransferred:
+            "वास्तविकं धनं न स्थानान्तरितम्।",
+        paymentSimulatedPrototype:
+            "इदं भुगतानं AgriVibe नमूनायै अनुकरणं कृतम्।",
+        viewMyOrders: "मम आदेशान् पश्यतु",
+        continueShopping: "क्रयणं निरन्तरं कुर्वन्तु",
+        secureDemoPayment: "सुरक्षितं नमूना-भुगतानम्",
+        farmer: "कृषकः",
+        totalAmount: "सम्पूर्णराशिः",
+        deliveryLocation: "वितरणस्थानम्",
+        chooseDemoPaymentMethod:
+            "नमूना-भुगतानविधिं चिनोतु।",
+        demoUPIPayment: "नमूना UPI भुगतानम्",
+        card: "पत्रम्",
+        demoCardPayment: "नमूना-पत्रभुगतानम्",
+        cashOnDelivery:
+            "वस्तुप्राप्त्यनन्तरं भुगतानम्",
+        payWhenDelivered:
+            "सस्यस्य वितरणसमये भुगतानं कुर्वन्तु",
+        processing: "प्रक्रिया प्रचलति...",
+        confirmOrder: "आदेशं निश्चितं कुर्वन्तु",
+        payAmount: "भुगतानं कुर्वन्तु",
+        demoMode: "नमूना-प्रकारः",
+        noRealPayment:
+            "वास्तविकं धनं वा वित्तीयसूचना वा संसाध्यते न।",
+        loadingPayment: "भुगतानं लोड् भवति...",
+        paymentError: "भुगताने दोषः",
+        backToOrders: "आदेशेषु प्रत्यागच्छन्तु",
+        onlyBuyersCanMakePayments:
+            "केवलं क्रेतारः एव भुगतानं कर्तुं शक्नुवन्ति।",
+        orderIdMissing: "आदेश-सङ्केतः न प्राप्तः।",
+        notAllowedToPay:
+            "अस्य आदेशस्य भुगतानाय भवतः अनुमति नास्ति।",
+        unableToLoadOrder:
+            "आदेशः लोड् कर्तुं न शक्यते।",
+        unableToCreatePayment:
+            "भुगतानं निर्मातुं न शक्यते।",
+        paymentFailed: "भुगतानं विफलम् अभवत्।",
+        paymentFailedTryAgain:
+            "भुगतानं विफलम् अभवत्। कृपया पुनः प्रयत्नं कुर्वन्तु।"
+    },
+
+    // ==================================================
+    // SANTALI
+    // ==================================================
+    sat: {
+        paymentSuccessful: "পেমেন্ট সাফা গেয়া!",
+        cashOnDeliverySelected: "ক্যাশ অন ডেলিভারি বাছাও গেয়া",
+        orderPlacedWithCOD:
+            "আম অকর্ডর ক্যাশ অন ডেলিভারি সাতে দাড়েয়া।",
+        agrivibeDemoPaymentCompleted:
+            "আম AgriVibe ডেমো পেমেন্ট সাফা তে পুরা গেয়া।",
+        orderSummary: "অর্ডর সারাংশ",
+        crop: "হাসা",
+        quantity: "পরিমাণ",
+        price: "দাম",
+        total: "মোট",
+        paymentMethod: "পেমেন্ট পদ্ধতি",
+        paymentStatus: "পেমেন্ট অবস্থা",
+        paid: "পেমেন্ট হোয় গেয়া",
+        paymentId: "পেমেন্ট ID",
+        paidAt: "পেমেন্ট সময়",
+        demoPayment: "ডেমো পেমেন্ট",
+        noRealMoneyTransferred:
+            "কোনো আসল টাকা ট্রান্সফার নেয়া।",
+        paymentSimulatedPrototype:
+            "এই পেমেন্ট AgriVibe প্রোটোটাইপ লাগিন সিমুলেট করা হয়েছে।",
+        viewMyOrders: "আমাক অর্ডর দেখাও",
+        continueShopping: "কেনাকাটা চালু রাখাও",
+        secureDemoPayment: "নিরাপদ ডেমো পেমেন্ট",
+        farmer: "চাষী",
+        totalAmount: "মোট টাকা",
+        deliveryLocation: "ডেলিভারি জায়গা",
+        chooseDemoPaymentMethod:
+            "ডেমো পেমেন্ট পদ্ধতি বাছাও।",
+        demoUPIPayment: "ডেমো UPI পেমেন্ট",
+        card: "কার্ড",
+        demoCardPayment: "ডেমো কার্ড পেমেন্ট",
+        cashOnDelivery: "ক্যাশ অন ডেলিভারি",
+        payWhenDelivered:
+            "ফসল ডেলিভারি সময় পেমেন্ট করাও",
+        processing: "প্রসেসিং...",
+        confirmOrder: "অর্ডর নিশ্চিত করাও",
+        payAmount: "পেমেন্ট করাও",
+        demoMode: "ডেমো মোড",
+        noRealPayment:
+            "কোনো আসল টাকা বা আর্থিক তথ্য প্রসেস করা হয় না।",
+        loadingPayment: "পেমেন্ট লোড হোয়েত...",
+        paymentError: "পেমেন্ট ভুল",
+        backToOrders: "অর্ডর কো ফিরে যাও",
+        onlyBuyersCanMakePayments:
+            "খালি ক্রেতা পেমেন্ট করতে পারে।",
+        orderIdMissing: "অর্ডর ID নেয়া।",
+        notAllowedToPay:
+            "এই অর্ডর লাগিন পেমেন্ট করার অনুমতি আমাক নেয়া।",
+        unableToLoadOrder: "অর্ডর লোড করা যায়নি।",
+        unableToCreatePayment:
+            "পেমেন্ট বানানো যায়নি।",
+        paymentFailed: "পেমেন্ট ফেল হোয় গেয়া।",
+        paymentFailedTryAgain:
+            "পেমেন্ট ফেল হোয় গেয়া। আবার চেষ্টা করাও।"
+    },
+
+    // ==================================================
+    // SINDHI
+    // ==================================================
+    sd: {
+        paymentSuccessful: "ادائگي ڪامياب ٿي!",
+        cashOnDeliverySelected: "ڪيش آن ڊليوري چونڊي وئي",
+        orderPlacedWithCOD:
+            "توهان جو آرڊر ڪيش آن ڊليوري سان درج ڪيو ويو آهي.",
+        agrivibeDemoPaymentCompleted:
+            "توهان جي AgriVibe ڊيمو ادائگي ڪاميابي سان مڪمل ٿي وئي آهي.",
+        orderSummary: "آرڊر جو خلاصو",
+        crop: "فصل",
+        quantity: "مقدار",
+        price: "قيمت",
+        total: "ڪل",
+        paymentMethod: "ادائگي جو طريقو",
+        paymentStatus: "ادائگي جي حالت",
+        paid: "ادا ٿيل",
+        paymentId: "ادائگي ID",
+        paidAt: "ادائگي جو وقت",
+        demoPayment: "ڊيمو ادائگي",
+        noRealMoneyTransferred:
+            "ڪو به حقيقي پئسو منتقل نه ڪيو ويو.",
+        paymentSimulatedPrototype:
+            "هي ادائگي AgriVibe پروٽوٽائپ لاءِ سميوليٽ ڪئي وئي آهي.",
+        viewMyOrders: "منهنجا آرڊر ڏسو",
+        continueShopping: "خريداري جاري رکو",
+        secureDemoPayment: "محفوظ ڊيمو ادائگي",
+        farmer: "هاري",
+        totalAmount: "ڪل رقم",
+        deliveryLocation: "پهچائڻ جي جاءِ",
+        chooseDemoPaymentMethod:
+            "ڊيمو ادائگي جو طريقو چونڊيو.",
+        demoUPIPayment: "ڊيمو UPI ادائگي",
+        card: "ڪارڊ",
+        demoCardPayment: "ڊيمو ڪارڊ ادائگي",
+        cashOnDelivery: "ڪيش آن ڊليوري",
+        payWhenDelivered:
+            "فصل پهچائڻ وقت ادائگي ڪريو",
+        processing: "عمل جاري آهي...",
+        confirmOrder: "آرڊر جي تصديق ڪريو",
+        payAmount: "ادا ڪريو",
+        demoMode: "ڊيمو موڊ",
+        noRealPayment:
+            "ڪو حقيقي پئسو يا مالي معلومات پروسيس نه ڪئي وڃي ٿي.",
+        loadingPayment: "ادائگي لوڊ ٿي رهي آهي...",
+        paymentError: "ادائگي جي غلطي",
+        backToOrders: "آرڊرن ڏانهن واپس وڃو",
+        onlyBuyersCanMakePayments:
+            "صرف خريدار ادائگي ڪري سگهن ٿا.",
+        orderIdMissing: "آرڊر ID موجود ناهي.",
+        notAllowedToPay:
+            "توهان کي هن آرڊر لاءِ ادائگي ڪرڻ جي اجازت ناهي.",
+        unableToLoadOrder: "آرڊر لوڊ نه ٿي سگهيو.",
+        unableToCreatePayment:
+            "ادائگي ٺاهي نه سگهجي.",
+        paymentFailed: "ادائگي ناڪام ٿي.",
+        paymentFailedTryAgain:
+            "ادائگي ناڪام ٿي. مهرباني ڪري ٻيهر ڪوشش ڪريو."
+    },
+
+    // ==================================================
+    // TAMIL
+    // ==================================================
+    ta: {
+        paymentSuccessful:
+            "பணம் செலுத்துதல் வெற்றிகரமாக முடிந்தது!",
+        cashOnDeliverySelected:
+            "பொருள் பெற்றபின் பணம் செலுத்துதல் தேர்ந்தெடுக்கப்பட்டது",
+        orderPlacedWithCOD:
+            "பொருள் பெற்றபின் பணம் செலுத்தும் முறையில் உங்கள் ஆர்டர் பதிவு செய்யப்பட்டுள்ளது.",
+        agrivibeDemoPaymentCompleted:
+            "உங்கள் AgriVibe மாதிரி பணம் செலுத்துதல் வெற்றிகரமாக முடிந்தது.",
+        orderSummary: "ஆர்டர் சுருக்கம்",
+        crop: "பயிர்",
+        quantity: "அளவு",
+        price: "விலை",
+        total: "மொத்தம்",
+        paymentMethod: "பணம் செலுத்தும் முறை",
+        paymentStatus: "பணம் செலுத்திய நிலை",
+        paid: "செலுத்தப்பட்டது",
+        paymentId: "பணம் செலுத்தல் அடையாள எண்",
+        paidAt: "செலுத்திய நேரம்",
+        demoPayment: "மாதிரி பணம் செலுத்துதல்",
+        noRealMoneyTransferred:
+            "உண்மையான பணம் மாற்றப்படவில்லை.",
+        paymentSimulatedPrototype:
+            "இந்த பணம் செலுத்துதல் AgriVibe முன்மாதிரிக்காக உருவகப்படுத்தப்பட்டுள்ளது.",
+        viewMyOrders: "எனது ஆர்டர்களைப் பார்க்க",
+        continueShopping: "தொடர்ந்து வாங்கவும்",
+        secureDemoPayment:
+            "பாதுகாப்பான மாதிரி பணம் செலுத்துதல்",
+        farmer: "விவசாயி",
+        totalAmount: "மொத்த தொகை",
+        deliveryLocation: "விநியோக இடம்",
+        chooseDemoPaymentMethod:
+            "மாதிரி பணம் செலுத்தும் முறையைத் தேர்ந்தெடுக்கவும்.",
+        demoUPIPayment:
+            "மாதிரி UPI பணம் செலுத்துதல்",
+        card: "அட்டை",
+        demoCardPayment:
+            "மாதிரி அட்டை பணம் செலுத்துதல்",
+        cashOnDelivery:
+            "பொருள் பெற்றபின் பணம் செலுத்துதல்",
+        payWhenDelivered:
+            "பயிர் வழங்கப்படும் போது பணம் செலுத்தவும்",
+        processing: "செயலாக்கப்படுகிறது...",
+        confirmOrder: "ஆர்டரை உறுதிப்படுத்தவும்",
+        payAmount: "செலுத்தவும்",
+        demoMode: "மாதிரி முறை",
+        noRealPayment:
+            "உண்மையான பணம் அல்லது நிதித் தகவல் செயலாக்கப்படவில்லை.",
+        loadingPayment:
+            "பணம் செலுத்தும் பக்கம் ஏற்றப்படுகிறது...",
+        paymentError: "பணம் செலுத்தும் பிழை",
+        backToOrders: "ஆர்டர்களுக்குத் திரும்பு",
+        onlyBuyersCanMakePayments:
+            "வாங்குபவர்கள் மட்டுமே பணம் செலுத்த முடியும்.",
+        orderIdMissing:
+            "ஆர்டர் அடையாள எண் இல்லை.",
+        notAllowedToPay:
+            "இந்த ஆர்டருக்குப் பணம் செலுத்த உங்களுக்கு அனுமதி இல்லை.",
+        unableToLoadOrder:
+            "ஆர்டரை ஏற்ற முடியவில்லை.",
+        unableToCreatePayment:
+            "பணம் செலுத்துதலை உருவாக்க முடியவில்லை.",
+        paymentFailed:
+            "பணம் செலுத்துதல் தோல்வியடைந்தது.",
+        paymentFailedTryAgain:
+            "பணம் செலுத்துதல் தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்."
+    },
+
+    // ==================================================
+    // TELUGU
+    // ==================================================
+    te: {
+        paymentSuccessful: "చెల్లింపు విజయవంతమైంది!",
+        cashOnDeliverySelected:
+            "క్యాష్ ఆన్ డెలివరీ ఎంచుకోబడింది",
+        orderPlacedWithCOD:
+            "మీ ఆర్డర్ క్యాష్ ఆన్ డెలివరీతో నమోదు చేయబడింది.",
+        agrivibeDemoPaymentCompleted:
+            "మీ AgriVibe డెమో చెల్లింపు విజయవంతంగా పూర్తయింది.",
+        orderSummary: "ఆర్డర్ సారాంశం",
+        crop: "పంట",
+        quantity: "పరిమాణం",
+        price: "ధర",
+        total: "మొత్తం",
+        paymentMethod: "చెల్లింపు విధానం",
+        paymentStatus: "చెల్లింపు స్థితి",
+        paid: "చెల్లించబడింది",
+        paymentId: "చెల్లింపు ID",
+        paidAt: "చెల్లించిన సమయం",
+        demoPayment: "డెమో చెల్లింపు",
+        noRealMoneyTransferred:
+            "నిజమైన డబ్బు బదిలీ చేయబడలేదు.",
+        paymentSimulatedPrototype:
+            "ఈ చెల్లింపు AgriVibe ప్రోటోటైప్ కోసం సిమ్యులేట్ చేయబడింది.",
+        viewMyOrders: "నా ఆర్డర్లను చూడండి",
+        continueShopping: "కొనుగోలు కొనసాగించండి",
+        secureDemoPayment: "సురక్షిత డెమో చెల్లింపు",
+        farmer: "రైతు",
+        totalAmount: "మొత్తం మొత్తం",
+        deliveryLocation: "డెలివరీ స్థలం",
+        chooseDemoPaymentMethod:
+            "డెమో చెల్లింపు విధానాన్ని ఎంచుకోండి.",
+        demoUPIPayment: "డెమో UPI చెల్లింపు",
+        card: "కార్డ్",
+        demoCardPayment: "డెమో కార్డ్ చెల్లింపు",
+        cashOnDelivery: "క్యాష్ ఆన్ డెలివరీ",
+        payWhenDelivered:
+            "పంట డెలివరీ అయినప్పుడు చెల్లించండి",
+        processing: "ప్రాసెస్ అవుతోంది...",
+        confirmOrder: "ఆర్డర్ నిర్ధారించండి",
+        payAmount: "చెల్లించండి",
+        demoMode: "డెమో మోడ్",
+        noRealPayment:
+            "నిజమైన డబ్బు లేదా ఆర్థిక సమాచారం ప్రాసెస్ చేయబడదు.",
+        loadingPayment: "చెల్లింపు లోడ్ అవుతోంది...",
+        paymentError: "చెల్లింపు లోపం",
+        backToOrders: "ఆర్డర్లకు తిరిగి వెళ్లండి",
+        onlyBuyersCanMakePayments:
+            "కొనుగోలుదారులు మాత్రమే చెల్లించగలరు.",
+        orderIdMissing: "ఆర్డర్ ID లేదు.",
+        notAllowedToPay:
+            "ఈ ఆర్డర్ కోసం చెల్లించడానికి మీకు అనుమతి లేదు.",
+        unableToLoadOrder:
+            "ఆర్డర్‌ను లోడ్ చేయడం సాధ్యం కాలేదు.",
+        unableToCreatePayment:
+            "చెల్లింపును సృష్టించడం సాధ్యం కాలేదు.",
+        paymentFailed: "చెల్లింపు విఫలమైంది.",
+        paymentFailedTryAgain:
+            "చెల్లింపు విఫలమైంది. దయచేసి మళ్లీ ప్రయత్నించండి."
+    },
+
+    // ==================================================
+    // URDU
+    // ==================================================
+    ur: {
+        paymentSuccessful: "ادائیگی کامیاب ہوگئی!",
+        cashOnDeliverySelected:
+            "کیش آن ڈیلیوری منتخب کرلی گئی",
+        orderPlacedWithCOD:
+            "آپ کا آرڈر کیش آن ڈیلیوری کے ساتھ درج کردیا گیا ہے۔",
+        agrivibeDemoPaymentCompleted:
+            "آپ کی AgriVibe ڈیمو ادائیگی کامیابی سے مکمل ہوگئی ہے۔",
+        orderSummary: "آرڈر کا خلاصہ",
+        crop: "فصل",
+        quantity: "مقدار",
+        price: "قیمت",
+        total: "کل",
+        paymentMethod: "ادائیگی کا طریقہ",
+        paymentStatus: "ادائیگی کی حالت",
+        paid: "ادا شدہ",
+        paymentId: "ادائیگی ID",
+        paidAt: "ادائیگی کا وقت",
+        demoPayment: "ڈیمو ادائیگی",
+        noRealMoneyTransferred:
+            "کوئی حقیقی رقم منتقل نہیں کی گئی۔",
+        paymentSimulatedPrototype:
+            "یہ ادائیگی AgriVibe پروٹوٹائپ کے لیے سمیولیٹ کی گئی ہے۔",
+        viewMyOrders: "میرے آرڈرز دیکھیں",
+        continueShopping: "خریداری جاری رکھیں",
+        secureDemoPayment: "محفوظ ڈیمو ادائیگی",
+        farmer: "کسان",
+        totalAmount: "کل رقم",
+        deliveryLocation: "ڈیلیوری کا مقام",
+        chooseDemoPaymentMethod:
+            "ڈیمو ادائیگی کا طریقہ منتخب کریں۔",
+        demoUPIPayment: "ڈیمو UPI ادائیگی",
+        card: "کارڈ",
+        demoCardPayment: "ڈیمو کارڈ ادائیگی",
+        cashOnDelivery: "کیش آن ڈیلیوری",
+        payWhenDelivered:
+            "فصل پہنچنے پر ادائیگی کریں",
+        processing: "کارروائی جاری ہے...",
+        confirmOrder: "آرڈر کی تصدیق کریں",
+        payAmount: "ادائیگی کریں",
+        demoMode: "ڈیمو موڈ",
+        noRealPayment:
+            "کوئی حقیقی رقم یا مالی معلومات پروسیس نہیں کی جاتی۔",
+        loadingPayment: "ادائیگی لوڈ ہو رہی ہے...",
+        paymentError: "ادائیگی کی خرابی",
+        backToOrders: "آرڈرز پر واپس جائیں",
+        onlyBuyersCanMakePayments:
+            "صرف خریدار ادائیگی کر سکتے ہیں۔",
+        orderIdMissing: "آرڈر ID موجود نہیں ہے۔",
+        notAllowedToPay:
+            "آپ کو اس آرڈر کی ادائیگی کی اجازت نہیں ہے۔",
+        unableToLoadOrder:
+            "آرڈر لوڈ نہیں کیا جا سکا۔",
+        unableToCreatePayment:
+            "ادائیگی نہیں بنائی جا سکی۔",
+        paymentFailed: "ادائیگی ناکام ہوگئی۔",
+        paymentFailedTryAgain:
+            "ادائیگی ناکام ہوگئی۔ براہ کرم دوبارہ کوشش کریں۔"
+    }
+};
+
+
+// ======================================================
+// ADD PAYMENT TRANSLATIONS TO ALL LANGUAGES
+// ======================================================
+
+Object.keys(translations).forEach((lang) => {
+
+    if (!translations[lang]) {
+        translations[lang] = {};
+    }
+
+    const selectedPaymentLanguage =
+        paymentTranslations[lang];
+
+    Object.keys(paymentTranslations.en).forEach((key) => {
+
+        if (
+            selectedPaymentLanguage &&
+            selectedPaymentLanguage[key] !== undefined &&
+            selectedPaymentLanguage[key] !== null &&
+            selectedPaymentLanguage[key] !== ""
+        ) {
+            translations[lang][key] =
+                selectedPaymentLanguage[key];
+        }
+        else if (
+            translations[lang][key] === undefined ||
+            translations[lang][key] === null ||
+            translations[lang][key] === ""
+        ) {
+            translations[lang][key] =
+                paymentTranslations.en[key];
+        }
+
+    });
+
+});
+
+
+// ======================================================
+// EXPORT MUST BE AT THE VERY BOTTOM
+// ======================================================
+
 export default translations;
