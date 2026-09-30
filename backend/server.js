@@ -13,13 +13,57 @@ const paymentRoutes = require("./routes/paymentRoutes");
 
 const app = express();
 
-app.use(
-    cors()
-);
+const PORT = process.env.PORT || 5000;
+
+/*
+=========================================================
+CORS
+=========================================================
+*/
 
 app.use(
-    express.json()
+    cors({
+        origin: [
+            "http://localhost:5173",
+            "https://agrivibe-eight.vercel.app"
+        ],
+        methods: [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE",
+            "OPTIONS"
+        ],
+        allowedHeaders: [
+            "Content-Type",
+            "Authorization"
+        ]
+    })
 );
+
+
+/*
+=========================================================
+MIDDLEWARE
+=========================================================
+*/
+
+app.use(express.json());
+
+
+/*
+=========================================================
+HEALTH CHECK
+=========================================================
+*/
+
+app.get("/", (req, res) => {
+    res.json({
+        success: true,
+        message: "AgriVibe Backend is running",
+        environment: process.env.NODE_ENV || "production"
+    });
+});
 
 
 /*
@@ -61,37 +105,62 @@ app.use(
 
 /*
 =========================================================
+404 API HANDLER
+=========================================================
+*/
+
+app.use("/api", (req, res) => {
+    res.status(404).json({
+        success: false,
+        message: `API route not found: ${req.method} ${req.originalUrl}`
+    });
+});
+
+
+/*
+=========================================================
+GENERAL ERROR HANDLER
+=========================================================
+*/
+
+app.use((error, req, res, next) => {
+    console.error("Server Error:", error);
+
+    res.status(500).json({
+        success: false,
+        message: "Internal server error"
+    });
+});
+
+
+/*
+=========================================================
 MONGODB CONNECTION
 =========================================================
 */
 
 mongoose
-    .connect(
-        process.env.MONGO_URI
-    )
-
+    .connect(process.env.MONGO_URI)
     .then(() => {
 
-        console.log(
-            "MongoDB Connected"
-        );
+        console.log("MongoDB Connected");
 
-        app.listen(
-            process.env.PORT,
-            () => {
+        app.listen(PORT, () => {
 
-                console.log(
-                    `Server Running on port ${process.env.PORT}`
-                );
+            console.log(
+                `Server Running on port ${PORT}`
+            );
 
-                console.log(
-                    "AgriVibe Payment System: Demo Mode"
-                );
-            }
-        );
+            console.log(
+                "AgriVibe Payment System: Demo Mode"
+            );
+
+            console.log(
+                "AgriVibe API: Production Ready"
+            );
+        });
 
     })
-
     .catch((error) => {
 
         console.error(
@@ -99,4 +168,5 @@ mongoose
             error
         );
 
+        process.exit(1);
     });
