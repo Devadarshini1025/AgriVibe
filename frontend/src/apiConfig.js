@@ -1,57 +1,40 @@
 import axios from "axios";
 
 /*
- * AgriVibe API Configuration
+ * AgriVibe Production API
  *
- * Development:
- *   http://localhost:5000
+ * Vercel:
+ * VITE_API_URL must contain your Render backend URL.
  *
- * Production:
- *   VITE_API_URL from Vercel
+ * Example:
+ * VITE_API_URL=https://agrivibe-backend.onrender.com
  */
 
 const API_URL = (
     import.meta.env.VITE_API_URL ||
-    "http://localhost:5000"
+    "https://agrivibe-backend.onrender.com"
 ).replace(/\/$/, "");
 
-
 /*
- * Convert localhost API URLs
- * to the deployed Render backend.
+ * Automatically convert old localhost API calls
+ * to the deployed Render API.
  */
-
 axios.interceptors.request.use(
     (config) => {
-
-        if (
-            typeof config.url === "string" &&
-            config.url.startsWith("http://localhost:5000")
-        ) {
-            config.url = config.url.replace(
-                "http://localhost:5000",
-                API_URL
-            );
-        }
-
-        /*
-         * Support relative API URLs
-         * such as /api/products
-         */
-
-        else if (
-            typeof config.url === "string" &&
-            config.url.startsWith("/api/")
-        ) {
-            config.url = API_URL + config.url;
+        if (typeof config.url === "string") {
+            if (config.url.startsWith("http://localhost:5000")) {
+                config.url = config.url.replace(
+                    "http://localhost:5000",
+                    API_URL
+                );
+            } else if (config.url.startsWith("/api/")) {
+                config.url = API_URL + config.url;
+            }
         }
 
         return config;
     },
-
-    (error) => {
-        return Promise.reject(error);
-    }
+    (error) => Promise.reject(error)
 );
 
 export default API_URL;
