@@ -4,10 +4,10 @@ import axios from "axios";
  * AgriVibe API Configuration
  *
  * Development:
- *   Uses http://localhost:5000
+ *   http://localhost:5000
  *
  * Production:
- *   Uses VITE_API_URL from Vercel
+ *   VITE_API_URL from Vercel
  */
 
 const API_URL = (
@@ -17,11 +17,8 @@ const API_URL = (
 
 
 /*
- * Convert existing localhost API URLs
+ * Convert localhost API URLs
  * to the deployed Render backend.
- *
- * This allows existing AgriVibe pages to
- * continue using their current axios URLs.
  */
 
 axios.interceptors.request.use(
@@ -29,20 +26,16 @@ axios.interceptors.request.use(
 
         if (
             typeof config.url === "string" &&
-            config.url.startsWith(
-                "http://localhost:5000"
-            )
+            config.url.startsWith("http://localhost:5000")
         ) {
-
-            config.url =
-                config.url.replace(
-                    "http://localhost:5000",
-                    API_URL
-                );
+            config.url = config.url.replace(
+                "http://localhost:5000",
+                API_URL
+            );
         }
 
         /*
-         * Also support relative API URLs
+         * Support relative API URLs
          * such as /api/products
          */
 
@@ -50,9 +43,7 @@ axios.interceptors.request.use(
             typeof config.url === "string" &&
             config.url.startsWith("/api/")
         ) {
-
-            config.url =
-                `${API_URL}${config.url}`;
+            config.url = API_URL + config.url;
         }
 
         return config;
@@ -62,11 +53,5 @@ axios.interceptors.request.use(
         return Promise.reject(error);
     }
 );
-
-
-/*
- * Export the API URL in case future
- * components need it directly.
- */
 
 export default API_URL;

@@ -5,6 +5,15 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { LanguageProvider } from "./context/LanguageContext";
 
+/*
+ * AgriVibe API configuration
+ *
+ * This must load before the application so
+ * Axios can replace localhost API URLs with
+ * the deployed Render backend URL.
+ */
+import "./apiConfig";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
